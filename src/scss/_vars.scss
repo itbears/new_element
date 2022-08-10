@@ -8,3 +8,32 @@ $green: #0f754e;
 $blue: #2566af;
 $gray: #808080;
 $gray-light: #c0c0c0;
+
+// Fonts
+@mixin light300 {
+    font-family: "VelaSans-Light";
+}
+
+@mixin regular400 {
+    font-family: "VelaSans-Regular";
+}
+
+@mixin extraLight200 {
+    font-family: "VelaSans-ExtraLight";
+}
+
+@mixin bold700 {
+    font-family: "VelaSans-Bold";
+}
+
+@mixin extraBold800 {
+    font-family: "VelaSans-ExtraBold";
+}
+
+@mixin semiBold600 {
+    font-family: "VelaSans-SemiBold";
+}
+
+@mixin medium500 {
+    font-family: "VelaSans-Medium";
+}
