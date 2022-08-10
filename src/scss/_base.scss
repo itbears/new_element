@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 130%;
+    color: #121212;
+}
