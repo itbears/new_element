@@ -10,30 +10,30 @@ $gray: #808080;
 $gray-light: #c0c0c0;
 
 // Fonts
-@mixin light300 {
+@mixin flight300 {
     font-family: "VelaSans-Light";
 }
 
-@mixin regular400 {
+@mixin fregular400 {
     font-family: "VelaSans-Regular";
 }
 
-@mixin extraLight200 {
+@mixin fextraLight200 {
     font-family: "VelaSans-ExtraLight";
 }
 
-@mixin bold700 {
+@mixin fbold700 {
     font-family: "VelaSans-Bold";
 }
 
-@mixin extraBold800 {
+@mixin fextraBold800 {
     font-family: "VelaSans-ExtraBold";
 }
 
-@mixin semiBold600 {
+@mixin fsemiBold600 {
     font-family: "VelaSans-SemiBold";
 }
 
-@mixin medium500 {
+@mixin fmedium500 {
     font-family: "VelaSans-Medium";
 }

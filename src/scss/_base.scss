@@ -28,89 +28,26 @@ h4 {
 }
 
 h1 {
-    @include semiBold600;
+    @include fsemiBold600;
     font-size: 50px;
     line-height: 130%;
 }
 
 h2 {
-    @include semiBold600;
+    @include fsemiBold600;
     font-size: 46px;
     line-height: 63px;
 }
 
 h3 {
-    @include semiBold600;
+    @include fsemiBold600;
     font-size: 40px;
     line-height: 130%;
     text-transform: uppercase;
 }
 
 h4 {
-    @include semiBold600;
+    @include fsemiBold600;
     font-size: 30px;
-    line-height: 130%;
-}
-
-.text-1 {
-    @include regular400;
-    font-size: 22px;
-    line-height: 30px;
-}
-
-.text-2 {
-    @include medium500;
-    font-size: 20px;
-    line-height: 27px;
-}
-
-.text-3 {
-    @include regular400;
-    font-size: 14px;
-    line-height: 19px;
-    color: $gray;
-}
-
-.text-4 {
-    @include semiBold600;
-    font-size: 24px;
-    line-height: 33px;
-}
-
-.text-5 {
-    @include regular400;
-    font-size: 16px;
-    line-height: 145%;
-    color: $gray;
-}
-
-.text-6 {
-    @include regular400;
-    font-size: 18px;
-    line-height: 145%;
-    color: $black;
-}
-
-.text-7 {
-    @include medium500;
-    font-size: 24px;
-    line-height: 33px;
-}
-
-.btn-1 {
-    @include semiBold600;
-    font-size: 18px;
-    line-height: 25px;
-}
-
-.btn-2 {
-    @include regular400;
-    font-size: 14px;
-    line-height: 19px;
-}
-
-.btn-3 {
-    @include semiBold600;
-    font-size: 16px;
     line-height: 130%;
 }
