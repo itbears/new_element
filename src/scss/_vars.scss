@@ -10,6 +10,10 @@ $gray: #808080;
 $gray-light: #c0c0c0;
 
 // Fonts
+@mixin fextraLight200 {
+    font-family: "VelaSans-ExtraLight";
+}
+
 @mixin flight300 {
     font-family: "VelaSans-Light";
 }
@@ -18,8 +22,12 @@ $gray-light: #c0c0c0;
     font-family: "VelaSans-Regular";
 }
 
-@mixin fextraLight200 {
-    font-family: "VelaSans-ExtraLight";
+@mixin fmedium500 {
+    font-family: "VelaSans-Medium";
+}
+
+@mixin fsemiBold600 {
+    font-family: "VelaSans-SemiBold";
 }
 
 @mixin fbold700 {
@@ -28,12 +36,4 @@ $gray-light: #c0c0c0;
 
 @mixin fextraBold800 {
     font-family: "VelaSans-ExtraBold";
-}
-
-@mixin fsemiBold600 {
-    font-family: "VelaSans-SemiBold";
-}
-
-@mixin fmedium500 {
-    font-family: "VelaSans-Medium";
 }

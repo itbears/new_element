@@ -20,34 +20,39 @@ button {
     background: none;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    color: $black;
-}
+// h1,
+// h2,
+// h3,
+// h4 {
+//     color: $black;
+// }
 
-h1 {
-    @include fsemiBold600;
-    font-size: 50px;
-    line-height: 130%;
-}
+// h1 {
+//     @include fsemiBold600;
+//     font-size: 50px;
+//     line-height: 130%;
+// }
 
-h2 {
-    @include fsemiBold600;
-    font-size: 46px;
-    line-height: 63px;
-}
+// h2 {
+//     @include fsemiBold600;
+//     font-size: 46px;
+//     line-height: 63px;
+// }
 
-h3 {
-    @include fsemiBold600;
-    font-size: 40px;
-    line-height: 130%;
-    text-transform: uppercase;
-}
+// h3 {
+//     @include fsemiBold600;
+//     font-size: 40px;
+//     line-height: 130%;
+//     text-transform: uppercase;
+// }
 
-h4 {
-    @include fsemiBold600;
-    font-size: 30px;
-    line-height: 130%;
+// h4 {
+//     @include fsemiBold600;
+//     font-size: 30px;
+//     line-height: 130%;
+// }
+.wrapper{
+    max-width: 1160px;
+    margin: 0px auto;
+    width: 100%;
 }

@@ -1,13 +1,123 @@
 .header {
-    &__logo {
-    }
-    &__nav {
+    padding-top: 27px;
+    padding-bottom: 26px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: $body-bcg;
+
+    &__container {
+        display: flex;
     }
 
-    &__list {
-        &-item {
-            &-link {
-                @include fmedium500;
+    &__menu {
+        display: none;
+
+        &-element {
+            background-color: black;
+            width: 20px;
+            height: 2px;
+            display: block;
+            margin-top: 4px;
+            margin-left: 15px;
+
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+    }
+
+    &__nav {
+        margin-left: 39px;
+
+        &-list {
+            display: flex;
+
+            &-item {
+                margin-left: 20px;
+
+                &:first-child {
+                    margin-left: 0px;
+                }
+
+                &-link {
+                    color: $black;
+                    @include fregular400;
+                }
+            }
+        }
+    }
+
+    &__filter {
+        display: flex;
+        margin-left: auto;
+        &--display-none{
+            display: none;
+        }
+        &-catalog {
+            display: flex;
+            margin-right: 19px;
+
+            &-text {
+                margin-left: 10px;
+            }
+        }
+
+        &-place {
+            display: flex;
+
+            &-text {
+                margin-left: 5px;
+                margin-right: 3px;
+            }
+        }
+    }
+
+    &__case {
+        display: flex;
+        margin-left: 3%;
+
+        &-pic {
+            margin-right: 16px;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .header {
+        &__container {
+            justify-content: space-between;
+        }
+
+        &__nav {
+            display: none;
+        }
+
+        &__filter {
+            margin-left: 0px;
+            margin-left: 41px;
+        }
+
+        &__menu {
+            display: block;
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+    .header{
+        &__filter{
+            display: none;
+            &--display-none{
+                display: flex;
+                margin-left: 0px;
+                justify-content: space-between;
+                box-sizing: border-box;
+                padding-top: 13px;
+                border-top: 1px solid black;
+                margin-top: 13px;
             }
         }
     }

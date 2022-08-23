@@ -1,0 +1,106 @@
+.novelties {
+    background-color: $body-bcg;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    &__title {
+        font-size: 46px;
+        line-height: 63px;
+        color: #121212;
+        @include fsemiBold600;
+        margin-bottom: 40px;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        &-card {
+            max-width: 360px;
+            width: 100%;
+            background-color: white;
+            border-radius: 20px;
+            padding-bottom: 26px;
+            cursor: pointer;
+            box-sizing: border-box;
+            border: 2px solid transparent;
+            &:hover{
+                border: 2px solid #DE701D;
+            }
+            &-wrapper {
+                max-width: 330px;
+                margin: 0px auto;
+                width: 100%;
+            }
+
+            &-pic {
+                margin-bottom: 20px;
+            }
+
+            &-name {
+                @include fmedium500;
+                font-size: 20px;
+                line-height: 27px;
+                max-width: 250px;
+                margin-bottom: 5px;
+            }
+
+            &-number {
+                color: #808080;
+                font-size: 14px;
+                line-height: 19px;
+                margin-bottom: 15px;
+            }
+
+            &-prices {
+                display: flex;
+                align-items: flex-end;
+                margin-bottom: 26px;
+            }
+
+            &-now-price {
+                font-size: 24px;
+                line-height: 33px;
+                color: #121212;
+                @include fsemiBold600;
+            }
+
+            &-past-price {
+                font-size: 16px;
+                line-height: 145%;
+                color: #C0C0C0;
+                @include fregular400;
+                margin-left: 5px;
+            }
+
+            &-buttons {
+                display: flex;
+                justify-content: space-between;
+
+                &-buy {
+                    color: white;
+                    background-color: #121212;
+                    display: flex;
+                    align-items: center;
+                    padding: 10px 32px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #DE701D;
+                    }
+                    &-pic {
+                        margin-right: 10px;
+                    }
+                }
+
+                &-more {
+                    color: black;
+                    border: 1px solid black;
+                    display: flex;
+                    align-items: center;
+                    padding: 11px 42px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}

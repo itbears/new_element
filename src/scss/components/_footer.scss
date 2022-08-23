@@ -1,0 +1,111 @@
+.footer {
+    background-color: #1B1B1B;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .wrapper {
+        max-width: 1040px;
+        width: 100%;
+        display: flex;
+    }
+
+    &__introduction {
+        max-width: 300px;
+        width: 100%;
+
+        &-text {
+            margin-top: 14px;
+            color: white;
+            @include flight300;
+            font-size: 15px;
+            line-height: 140%;
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 690px;
+        width: 100%;
+        margin-left: auto;
+
+        &-box {
+            &-title {
+                color: white;
+                @include fsemiBold600;
+                font-size: 18px;
+                line-height: 25px;
+                margin-bottom: 35px;
+            }
+
+            &-text {
+                color: white;
+                @include fsemiBold600;
+                font-size: 18px;
+                line-height: 25px;
+                max-width: 240px;
+                margin-bottom: 10px;
+            }
+
+            &-list {
+                &-item {
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+
+                    &-link {
+                        color: white;
+                        @include fregular400;
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .footer{
+        .wrapper{
+            flex-direction: column;
+            
+        }
+        &__container{
+            margin-left: 0px;
+            margin-top: 40px;
+        }
+    }
+}
+@media screen and (max-width: 639px) {
+    .footer{
+        &__container{
+            flex-wrap: wrap;
+            &-box{
+               &-last-wrapper{
+                display: flex;
+               } 
+            }
+        }
+    }
+}
+@media screen and (max-width: 479px) {
+    .footer{
+        &__container{
+            
+            &-box{
+                max-width: 139px;
+                &:last-child{
+                    max-width: 100%;
+                }
+               &-last-wrapper{
+                display: block;
+               } 
+            }
+        }
+    }
+}

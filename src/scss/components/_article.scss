@@ -1,0 +1,85 @@
+.article {
+    background-color: $body-bcg;
+    padding-bottom: 100px;
+    padding-top: 50px;
+    &__title {
+        font-size: 46px;
+        line-height: 63px;
+        @include fsemiBold600;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 145%;
+        @include fregular400;
+        margin-top: 10px;
+    }
+
+    &__container {
+        margin-top: 34px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+
+        &-card {
+            display: block;
+            position: relative;
+            max-width: 360px;
+            border-radius: 25px;
+            box-sizing: border-box;
+            border: 2px solid transparent;
+            cursor: pointer;
+
+            &:hover {
+                border: 2px solid #DE701D;
+            }
+            &-img {
+                border-radius: 25px;
+            }
+
+            &-name {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                font-size: 14px;
+                line-height: 19px;
+                color: white;
+                background-color: #DE701D;
+                padding: 3px 10px;
+                border-radius: 5px;
+                @include fregular400;
+                box-sizing: border-box;
+            }
+
+            &-text {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                max-width: 319px;
+                @include fmedium500;
+                font-size: 24px;
+                line-height: 33px;
+                color: white;
+            }
+        }
+
+    }
+
+    &__link {
+        display: inline-block;
+        color: white;
+        background-color: #DE701D;
+        padding: 12px 20px;
+        font-size: 18px;
+        line-height: 25px;
+        @include fsemiBold600;
+        border-radius: 10px;
+        box-sizing: border-box;
+        margin-top: 40px;
+        transition: 0.5s;
+        &:hover{
+            background-color: black;
+            transition: 0.5s;
+        }
+    }
+}
