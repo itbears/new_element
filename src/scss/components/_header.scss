@@ -2,6 +2,8 @@
     padding-top: 25px;
     padding-bottom: 25px;
     background-color: #EAEAEA;
+    position: relative;
+    z-index: 2;
 
     &__container {
         display: flex;
@@ -28,6 +30,10 @@
             @include fregular400;
             font-size: 16px;
             line-height: 22px;
+
+            &:hover {
+                color: #DE701D;
+            }
         }
     }
 
@@ -67,13 +73,21 @@
         &-city {
             display: flex;
             align-items: center;
+            position: relative;
+            z-index: 3;
+            padding-right: 26px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transition: 0.2s;
 
             &-icon {
                 margin-right: 5px;
                 margin-top: 3px;
             }
 
-            &-svg {}
+            &-svg {
+                transition: 0.5s;
+            }
 
             &-item {
                 display: inline-block;
@@ -84,7 +98,29 @@
                 margin-right: 3px;
 
                 &-sublist {
-                    display: none;
+                    position: absolute;
+                    z-index: 3;
+                    background-color: white;
+                    padding-top: 37px;
+                    width: 100%;
+                    top: -2000%;
+                    right: 0px;
+                    padding-left: 30px;
+                    padding-bottom: 24px;
+                    border-radius: 0px 0px 5px 5px;
+                    transition: 0.2s;
+
+                    &-item {
+                        margin-top: 15px;
+
+                        &:hover {
+                            color: #DE701D;
+                        }
+
+                        &:first-child {
+                            margin-top: 0px;
+                        }
+                    }
                 }
             }
         }
@@ -102,11 +138,24 @@
                 margin-right: 0px;
             }
         }
+
+        &-search {
+            margin-top: 3px;
+            &:hover {
+                
+            }
+            svg {
+                &:hover {
+                   
+                }
+            }
+        }
     }
 
     &__burger {
         cursor: pointer;
         display: none;
+        margin-bottom: 3px;
 
         span {
             display: block;
@@ -122,6 +171,8 @@
     }
 
     &__catalog {
+        padding-left: 20px;
+        padding-right: 20px;
         max-width: 100%;
         width: 100%;
         background-color: #EAEAEA;
@@ -129,12 +180,15 @@
         z-index: 1;
         padding-top: 20px;
         padding-bottom: 41px;
-        top: -100%;
+        top: -2000%;
+        left: 0;
         transition: 0.5s;
+
         &-container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 39px;
+            margin: 0 auto;
         }
 
         &-card {
@@ -143,7 +197,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-left: 30px;
             max-width: 358px;
             width: 100%;
 
@@ -151,6 +204,7 @@
                 max-width: 176px;
                 width: 100%;
                 color: black;
+                margin-left: 30px;
                 // margin-left: 30px;
             }
 
@@ -170,14 +224,42 @@
     }
 }
 
+.city-active {
+    background-color: white;
+    max-width: 203px;
+    width: 100%;
+    padding-right: 26px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 0.2s;
+}
+
+.sublist-active {
+    top: 40px;
+    transition: 0.2s;
+}
+
 .catalog-block {
     top: 80px;
     transition: 0.5s;
 
+    @media screen and (max-width: 639px) {
+        top: 120px;
+    }
+
+}
+
+.display-none {
+    visibility: hidden;
 }
 
 .display-block {
     display: block;
+}
+
+.transform {
+    rotate: 180deg;
+    transition: 0.5s;
 }
 
 @media screen and (max-width: 1200px) {
@@ -193,6 +275,9 @@
 
 @media screen and (max-width: 959px) {
     .header {
+        padding-left: 10px;
+        padding-right: 10px;
+
         &__container {
             // justify-content: space-between;
         }
@@ -210,9 +295,36 @@
             display: block;
             margin-left: 15px;
         }
-        &__catalog{
-            &-container{
-                grid-template-columns: 1fr 1fr;
+
+        &__catalog {
+            padding-left: 10px;
+            padding-right: 10px;
+
+            &-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px 20px;
+                justify-content: center;
+            }
+
+            &-card {
+                max-width: 300px;
+                width: 100%;
+
+                &-description {
+                    margin-left: 20px;
+                    max-width: 164px;
+                    width: 100%;
+                }
+
+                &-pic {
+                    max-width: 96px;
+                    width: 100%;
+                }
+
+                &-img {
+                    width: 100%;
+                }
             }
         }
     }
@@ -220,6 +332,58 @@
 
 @media screen and (max-width: 639px) {
     .header {
+        &__catalog {
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+
+            &-container {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            &-card {
+                max-width: 139px;
+                width: 100%;
+                position: relative;
+                display: flex;
+                height: 139px;
+
+                &-description {
+                    max-width: 98px;
+                    width: 100%;
+                    position: absolute;
+                    z-index: 2;
+                    margin-left: 0px;
+                    margin-bottom: 0px;
+                    top: 10px;
+                    left: 10px;
+                }
+
+                &-title {
+                    font-size: 14px;
+                    line-height: 19px;
+                }
+
+                &-subtitle {
+                    display: none;
+                }
+
+                &-pic {
+                    width: 98px;
+                    position: absolute;
+                    z-index: 1;
+                    right: 0px;
+                    bottom: 0px;
+                }
+
+                &-img {
+                    width: 98px;
+                    object-fit: cover;
+                }
+            }
+        }
+
         &__container {
             flex-wrap: wrap;
         }
@@ -227,11 +391,11 @@
         &__user {
             border-top: 1px solid #121212;
             padding-top: 12px;
-            margin-top: 8px;
             order: 4;
             width: 100%;
             margin: 0;
             justify-content: space-between;
+            margin-top: 8px;
 
             &-button {
                 margin-right: 0px;
@@ -243,5 +407,15 @@
         }
 
         &__logo {}
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .header {
+        &__catalog {
+            &-container {
+                justify-content: center;
+            }
+        }
     }
 }

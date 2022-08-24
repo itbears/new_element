@@ -34,6 +34,16 @@ let headerCatalog = document.querySelector('.header__catalog');
 catalogBtn.addEventListener('click', function () {
     headerCatalog.classList.toggle('catalog-block');
 })
-// catalogBtn.addEventListener('click', function() {
-//     headerCatalog.classList.toggle('header__catalog--top');
-// })
+
+//city
+let cityBtn = document.querySelector('.header__user-city');
+let citySubList = document.querySelector('.header__user-city-item-sublist');
+let cityIcon = document.querySelector('.header__user-city-icon');
+let citySvg = document.querySelector('.header__user-city-svg');
+
+cityBtn.addEventListener('click', function () {
+    cityBtn.classList.toggle('city-active');
+    citySubList.classList.toggle('sublist-active');
+    cityIcon.classList.toggle('display-none');
+    citySvg.classList.toggle('transform');
+})
