@@ -11,8 +11,8 @@
     <header class="header">
         <div class="wrapper">
             <div class="header__container">
-                <div class="header__pic">
-                    <a href="" class="header__logo">
+                <div class="header__logo">
+                    <a href="" class="header__logo-link">
                         <svg width="158" height="18" viewBox="0 0 158 18" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -23,32 +23,31 @@
                 </div>
                 <nav class="header__nav">
                     <ul class="header__nav-list">
-                        <li class="header__nav-list-item">
-                            <a href="" class="header__nav-list-item-link">
+                        <li class="header__nav-item">
+                            <a href="" class="header__nav-link">
                                 Примеры
                             </a>
                         </li>
-                        <li class="header__nav-list-item">
-                            <a href="" class="header__nav-list-item-link">
+                        <li class="header__nav-item">
+                            <a href="" class="header__nav-link">
                                 О компании
                             </a>
                         </li>
-                        <li class="header__nav-list-item">
-                            <a href="" class="header__nav-list-item-link">
+                        <li class="header__nav-item">
+                            <a href="" class="header__nav-link">
                                 Блог
                             </a>
                         </li>
-                        <li class="header__nav-list-item">
-                            <a href="" class="header__nav-list-item-link">
+                        <li class="header__nav-item">
+                            <a href="" class="header__nav-link">
                                 Контакты
                             </a>
                         </li>
                     </ul>
                 </nav>
-                <!-- <div class="header__user"> -->
-                <div class="header__filter">
-                    <div class="header__filter-catalog">
-                        <div class="header__filter-catalog-pic">
+                <div class="header__user">
+                    <button type="button" class="header__user-button">
+                        <div class="header__user-icon">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect width="9.3617" height="9.3617" rx="2" fill="#DE701D" />
@@ -57,12 +56,10 @@
                                 <rect x="10.6387" y="10.6387" width="9.3617" height="9.3617" rx="2" fill="#DE701D" />
                             </svg>
                         </div>
-                        <p class="header__filter-catalog-text">
-                            Каталог
-                        </p>
-                    </div>
-                    <div class="header__filter-place">
-                        <div class="header__filter-place-pic">
+                        Каталог
+                    </button>
+                    <div class="header__user-city">
+                        <div class="header__user-city-icon">
                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -75,10 +72,17 @@
                                     stroke-linejoin="round" />
                             </svg>
                         </div>
-                        <p class="header__filter-place-text">
-                            Санкт-Петербург
-                        </p>
-                        <div class="header__filter-place-pic">
+                        <ul class="header__user-city-list">
+                            <li class="header__user-city-item">
+                                Санкт-Петербург
+                                <ul class="header__user-city-item-sublist">
+                                    <li class="header__user-city-item-sublist-item">
+                                        Санкт-Петербург
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="header__user-city-svg">
                             <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M5.26799 6.0791C4.86821 6.55848 4.13179 6.55848 3.73201 6.0791L0.238901 1.89047C-0.304218 1.23921 0.15888 0.250001 1.00689 0.250001L7.99311 0.25C8.84112 0.25 9.30422 1.2392 8.7611 1.89046L5.26799 6.0791Z"
@@ -87,8 +91,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="header__case">
-                    <div class="header__case-pic">
+                <div class="header__interactive">
+                    <div class="header__interactive-item header__user-interactive-search">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_437_9469)">
                                 <path
@@ -105,7 +109,7 @@
                             </defs>
                         </svg>
                     </div>
-                    <div class="header__case-pic">
+                    <div class="header__interactive-item header__user-interactive-busket">
                         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M24.1068 0.892578H19.6426L18.089 16.339C18.0244 16.7648 17.8081 17.1529 17.48 17.4319C17.1518 17.7108 16.7339 17.8617 16.3033 17.8569H5.05327C4.66386 17.8772 4.27851 17.7695 3.95606 17.5502C3.63362 17.331 3.3918 17.0122 3.26755 16.6426L0.892554 9.49972C0.804003 9.23118 0.780492 8.94544 0.823955 8.66603C0.867419 8.38663 0.976614 8.12154 1.14255 7.89258C1.31543 7.64915 1.54658 7.45295 1.81486 7.32192C2.08314 7.1909 2.38 7.12924 2.67827 7.14258H19.0176"
@@ -122,58 +126,128 @@
                         </svg>
                     </div>
                 </div>
-                <!-- </div> -->
-                <div class="header__menu">
-                    <div class="header__menupic">
-                        <span class="header__menu-element">
-
-                        </span>
-                        <span class="header__menu-element">
-
-                        </span>
-                        <span class="header__menu-element">
-
-                        </span>
-                    </div>
+                <div class="header__burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-            <div class="header__filter header__filter--display-none">
-                <div class="header__filter-catalog">
-                    <div class="header__filter-catalog-pic">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="9.3617" height="9.3617" rx="2" fill="#DE701D" />
-                            <rect x="10.6387" width="9.3617" height="9.3617" rx="2" fill="#DE701D" />
-                            <rect y="10.6387" width="9.3617" height="9.3617" rx="2" fill="#DE701D" />
-                            <rect x="10.6387" y="10.6387" width="9.3617" height="9.3617" rx="2" fill="#DE701D" />
-                        </svg>
-                    </div>
-                    <p class="header__filter-catalog-text">
-                        Каталог
-                    </p>
-                </div>
-                <div class="header__filter-place">
-                    <div class="header__filter-place-pic">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M20.5363 8.92829C20.5363 13.3747 12.5006 24.1069 12.5006 24.1069C12.5006 24.1069 4.46484 13.3747 4.46484 8.92829C4.46484 6.79709 5.31146 4.75317 6.81845 3.24618C8.32544 1.7392 10.3694 0.892578 12.5006 0.892578C14.6318 0.892578 16.6757 1.7392 18.1827 3.24618C19.6897 4.75317 20.5363 6.79709 20.5363 8.92829V8.92829Z"
-                                stroke="#121212" stroke-width="1.21429" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M12.5008 11.6071C13.9802 11.6071 15.1794 10.4079 15.1794 8.92857C15.1794 7.44924 13.9802 6.25 12.5008 6.25C11.0215 6.25 9.82227 7.44924 9.82227 8.92857C9.82227 10.4079 11.0215 11.6071 12.5008 11.6071Z"
-                                stroke="#121212" stroke-width="1.21429" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <p class="header__filter-place-text">
-                        Санкт-Петербург
-                    </p>
-                    <div class="header__filter-place-pic">
-                        <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M5.26799 6.0791C4.86821 6.55848 4.13179 6.55848 3.73201 6.0791L0.238901 1.89047C-0.304218 1.23921 0.15888 0.250001 1.00689 0.250001L7.99311 0.25C8.84112 0.25 9.30422 1.2392 8.7611 1.89046L5.26799 6.0791Z"
-                                fill="#DE701D" />
-                        </svg>
-                    </div>
+        </div>
+        <div class="header__catalog">
+            <div class="wrapper">
+                <div class="header__catalog-container">
+                    <a href="" class="header__catalog-card">
+                        <div class="header__catalog-card-description">
+                            <h3 class="header__catalog-card-title">
+                                Ограждения
+                            </h3>
+                            <p class="header__catalog-card-subtitle">
+                                Фурнитура для ограждений, труба нержавеющая, поручни для ограждений, стойки, балясины,
+                                трубы, отбойники торговые расходные материалы
+                            </p>
+                        </div>
+                        <div class="header__catalog-card-pic">
+                            <img src="images/header-catalog.png" alt="Фото товара" class="header__catalog-card-img">
+                        </div>
+                    </a>
+                    <a href="" class="header__catalog-card">
+                        <div class="header__catalog-card-description">
+                            <h3 class="header__catalog-card-title">
+                                Ограждения
+                            </h3>
+                            <p class="header__catalog-card-subtitle">
+                                Фурнитура для ограждений, труба нержавеющая, поручни для ограждений, стойки, балясины,
+                                трубы, отбойники торговые расходные материалы
+                            </p>
+                        </div>
+                        <div class="header__catalog-card-pic">
+                            <img src="images/header-catalog.png" alt="Фото товара" class="header__catalog-card-img">
+                        </div>
+                    </a>
+                    <a href="" class="header__catalog-card">
+                        <div class="header__catalog-card-description">
+                            <h3 class="header__catalog-card-title">
+                                Ограждения
+                            </h3>
+                            <p class="header__catalog-card-subtitle">
+                                Фурнитура для ограждений, труба нержавеющая, поручни для ограждений, стойки, балясины,
+                                трубы, отбойники торговые расходные материалы
+                            </p>
+                        </div>
+                        <div class="header__catalog-card-pic">
+                            <img src="images/header-catalog.png" alt="Фото товара" class="header__catalog-card-img">
+                        </div>
+                    </a>
+                    <a href="" class="header__catalog-card">
+                        <div class="header__catalog-card-description">
+                            <h3 class="header__catalog-card-title">
+                                Ограждения
+                            </h3>
+                            <p class="header__catalog-card-subtitle">
+                                Фурнитура для ограждений, труба нержавеющая, поручни для ограждений, стойки, балясины,
+                                трубы, отбойники торговые расходные материалы
+                            </p>
+                        </div>
+                        <div class="header__catalog-card-pic">
+                            <img src="images/header-catalog.png" alt="Фото товара" class="header__catalog-card-img">
+                        </div>
+                    </a>
+                    <a href="" class="header__catalog-card">
+                        <div class="header__catalog-card-description">
+                            <h3 class="header__catalog-card-title">
+                                Ограждения
+                            </h3>
+                            <p class="header__catalog-card-subtitle">
+                                Фурнитура для ограждений, труба нержавеющая, поручни для ограждений, стойки, балясины,
+                                трубы, отбойники торговые расходные материалы
+                            </p>
+                        </div>
+                        <div class="header__catalog-card-pic">
+                            <img src="images/header-catalog.png" alt="Фото товара" class="header__catalog-card-img">
+                        </div>
+                    </a>
+                    <a href="" class="header__catalog-card">
+                        <div class="header__catalog-card-description">
+                            <h3 class="header__catalog-card-title">
+                                Ограждения
+                            </h3>
+                            <p class="header__catalog-card-subtitle">
+                                Фурнитура для ограждений, труба нержавеющая, поручни для ограждений, стойки, балясины,
+                                трубы, отбойники торговые расходные материалы
+                            </p>
+                        </div>
+                        <div class="header__catalog-card-pic">
+                            <img src="images/header-catalog.png" alt="Фото товара" class="header__catalog-card-img">
+                        </div>
+                    </a>
+                    <a href="" class="header__catalog-card">
+                        <div class="header__catalog-card-description">
+                            <h3 class="header__catalog-card-title">
+                                Ограждения
+                            </h3>
+                            <p class="header__catalog-card-subtitle">
+                                Фурнитура для ограждений, труба нержавеющая, поручни для ограждений, стойки, балясины,
+                                трубы, отбойники торговые расходные материалы
+                            </p>
+                        </div>
+                        <div class="header__catalog-card-pic">
+                            <img src="images/header-catalog.png" alt="Фото товара" class="header__catalog-card-img">
+                        </div>
+                    </a>
+                    <a href="" class="header__catalog-card">
+                        <div class="header__catalog-card-description">
+                            <h3 class="header__catalog-card-title">
+                                Ограждения
+                            </h3>
+                            <p class="header__catalog-card-subtitle">
+                                Фурнитура для ограждений, труба нержавеющая, поручни для ограждений, стойки, балясины,
+                                трубы, отбойники торговые расходные материалы
+                            </p>
+                        </div>
+                        <div class="header__catalog-card-pic">
+                            <img src="images/header-catalog.png" alt="Фото товара" class="header__catalog-card-img">
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
