@@ -1,6 +1,6 @@
 .footer {
     background-color: #1B1B1B;
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 30px;
     padding-left: 20px;
     padding-right: 20px;
@@ -32,12 +32,32 @@
         margin-left: auto;
 
         &-box {
+            &-wrapper-title {
+                display: flex;
+                background-color: #5C5C5C;
+                max-width: 105px;
+                max-height: 44px;
+                align-items: center;
+                padding: 11px 10px 11px 9px;
+                border-radius: 10px;
+                box-sizing: border-box;
+                margin-bottom: 25px;
+            }
+
             &-title {
                 color: white;
                 @include fsemiBold600;
                 font-size: 18px;
                 line-height: 25px;
-                margin-bottom: 35px;
+                margin-bottom: 25px;
+                &:last-child {
+                    @include fextraLight200; 
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin-bottom: 0px;
+                    margin-left: 5px;
+                    margin-bottom: 5px;
+                }
             }
 
             &-text {
@@ -70,41 +90,79 @@
 }
 
 @media screen and (max-width: 959px) {
-    .footer{
-        .wrapper{
+    .footer {
+        .wrapper {
             flex-direction: column;
-            
+
         }
-        &__container{
+
+        &__container {
             margin-left: 0px;
             margin-top: 40px;
         }
     }
 }
+
 @media screen and (max-width: 639px) {
-    .footer{
-        &__container{
+    .footer {
+        &__container {
             flex-wrap: wrap;
-            &-box{
-               &-last-wrapper{
-                display: flex;
-               } 
+            justify-content: flex-start;
+
+            &-box {
+                &:first-child {
+                    margin-right: 70px;
+                }
+
+                &-title {
+                    &:last-child {
+                        margin-bottom: 25px;
+                    }
+
+                    margin-top: 40px;
+                }
+
+                &-last-wrapper {
+                    display: flex;
+                }
+
+                &-text {
+                    margin-right: 10px;
+                }
             }
         }
     }
 }
+
 @media screen and (max-width: 479px) {
-    .footer{
-        &__container{
-            
-            &-box{
+    .footer {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &__container {
+
+            &-box {
                 max-width: 139px;
-                &:last-child{
+
+                &:last-child {
                     max-width: 100%;
                 }
-               &-last-wrapper{
-                display: block;
-               } 
+
+                &-last-wrapper {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 361px) {
+    .footer {
+        &__container {
+            &-box {
+                &:first-child {
+                    margin-right: 28px;
+                }
             }
         }
     }
