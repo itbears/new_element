@@ -1,0 +1,345 @@
+.product {
+    background-color: #EAEAEA;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    &__card {
+        border-radius: 25px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        ul {
+            margin-top: 15px;
+        }
+
+        li {
+            margin-top: 4px;
+
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+
+        &-pic {
+            max-width: 346px;
+        }
+
+        &-content {
+            max-width: 641px;
+            width: 100%;
+
+            &-pic {
+                display: none
+            }
+
+            &-title {
+                @include fsemiBold600;
+                font-size: 30px;
+                line-height: 130%;
+            }
+
+            &-number {
+                @include fregular400;
+                font-size: 14px;
+                line-height: 19px;
+                margin-top: 2px;
+                color: #808080;
+
+            }
+
+            &-subtitle {
+                @include fregular400;
+                font-size: 16px;
+                line-height: 145%;
+                margin-top: 10px;
+                max-width: 400px;
+                margin-bottom: 26px;
+            }
+
+            &-prices {
+                display: flex;
+                float: left;
+                align-items: flex-end;
+                margin-top: 2px;
+            }
+
+            &-now-price {
+                @include fsemiBold600;
+                font-size: 24px;
+                line-height: 33px;
+            }
+
+            &-past-price {
+                @include fregular400;
+                font-size: 16px;
+                line-height: 145%;
+                color: #C0C0C0;
+                margin-left: 6px;
+                margin-right: 36px;
+            }
+
+            &-button {
+                @include fregular400;
+                font-size: 14px;
+                line-height: 19px;
+                background-color: #DE701D;
+                color: white;
+                display: flex;
+                padding: 7px 32px;
+                align-items: center;
+                border-radius: 10px;
+                cursor: pointer;
+
+                &-svg {
+                    margin-right: 10px;
+                    margin-top: 4px;
+                }
+            }
+
+            &-characteristics {
+                margin-top: 28px;
+                border-top: 1px solid #121212;
+                padding-top: 25px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: space-between;
+
+                &-characteristic {
+                    &-title {
+                        @include fmedium500;
+                        font-size: 20px;
+                        line-height: 27px;
+                    }
+
+                    &-list {
+                        list-style: disc;
+                        margin-left: 27px;
+                    }
+
+                    &-item {
+                        @include fregular400;
+                        font-size: 18px;
+                        line-height: 145%;
+
+                        &::marker {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                &-secondary {
+                    &:last-child {
+                        margin-top: 14px;
+                    }
+
+                    &-title {
+                        @include fmedium500;
+                        font-size: 20px;
+                        line-height: 27px;
+                    }
+
+                    &-list {
+                        list-style: disc;
+                        margin-left: 27px;
+                    }
+
+                    &-item {
+                        @include fregular400;
+                        font-size: 18px;
+                        line-height: 145%;
+                    }
+                }
+            }
+
+            &-description {
+                margin-top: 24px;
+
+                &-title {
+                    @include fmedium500;
+                    font-size: 20px;
+                    line-height: 27px;
+                    margin-bottom: 15px;
+                }
+
+                &-text {
+                    @include fregular400;
+                    font-size: 18px;
+                    line-height: 145%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .product {
+        &__card {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            &-pic {
+                margin-right: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .product {
+        &__card {
+            ul {
+                margin-left: 24px;
+            }
+
+            li {
+                font-size: 16px;
+            }
+
+            &-content {
+                &-characteristics {
+                    &-characteristic {
+                        max-width: 200px;
+                        margin-right: auto;
+                    }
+
+                    &-secondary {}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .product {
+        &__card {
+            &-pic {
+                display: none;
+            }
+
+            &-content {
+                &-pic {
+                    display: block;
+                }
+
+                max-width: 100%;
+
+                &-characteristics {
+                    justify-content: flex-start;
+                    &-characteristic {
+                        margin-right: 77px;
+                    }
+                }
+
+                &-pic {
+                    display: block;
+                    margin-right: 20px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                &-inner {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                &-title {
+                    font-size: 25px;
+                }
+
+                &-button {
+                    padding: 8px 29px;
+
+                    &-svg {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 639px) {
+    .product{
+        &__card{
+            padding-left: 20px;
+            padding-right: 20px;
+            &-content{
+                h3{
+                    font-size: 16px;
+                }
+                li{
+                    font-size: 14px;
+                }
+                &-pic{
+                    margin-right: 15px;
+                    max-width: 139px;
+                    height: 174px;
+                    img{
+                        height: 174px;
+                    }
+                }
+                &-characteristics {
+                    justify-content: flex-start;
+                    &-characteristic {
+                        margin-right: 16px;
+                    }
+                }
+                &-title{
+                    font-size: 20px;
+                }
+                &-subtitle{
+                    font-size: 16px;
+                }
+                &-now-price{
+                    font-size: 20px;
+                }
+                &-past-price{
+                    font-size: 14px;
+                }
+                &-button{
+                    font-size: 12px;
+                    padding-top: 4px;
+                    padding-bottom: 4px;
+                }
+                &-description{
+                    &-text{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .product{
+        &__card{
+            &-content{
+                &-pic{
+                    max-width: 100%;
+                    img{
+                        height: 100%;
+                    }
+                }
+                &-button{
+                    padding: 8px 26px;
+                    &-svg{
+                        max-width: 17px;
+                    }
+                }
+                &-inner{
+                    flex-direction: column;
+                }
+                &-characteristics{
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
