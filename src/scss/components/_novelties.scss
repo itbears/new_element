@@ -2,6 +2,7 @@
     background-color: $body-bcg;
     padding-top: 130px;
     padding-bottom: 130px;
+
     &__title {
         font-size: 46px;
         line-height: 63px;
@@ -14,26 +15,34 @@
         display: flex;
         flex-wrap: wrap;
         gap: 40px;
+
         &-card {
             max-width: 360px;
             width: 100%;
             background-color: white;
             border-radius: 20px;
             padding-bottom: 26px;
-            cursor: pointer;
             box-sizing: border-box;
+            cursor: pointer;
             border: 2px solid transparent;
-            &:hover{
+
+            &:hover {
                 border: 2px solid #DE701D;
             }
+
             &-wrapper {
-                max-width: 330px;
+                max-width: 320px;
                 margin: 0px auto;
                 width: 100%;
             }
 
             &-pic {
                 margin-bottom: 20px;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
             }
 
             &-name {
@@ -84,9 +93,11 @@
                     padding: 10px 32px;
                     border-radius: 10px;
                     cursor: pointer;
-                    &:hover{
+
+                    &:hover {
                         background-color: #DE701D;
                     }
+
                     &-pic {
                         margin-right: 10px;
                     }
@@ -98,9 +109,12 @@
                     display: flex;
                     align-items: center;
                     padding: 11px 42px;
+                    @include fregular400;
                     border-radius: 10px;
                 }
             }
         }
     }
 }
+
+@media screen and (max-width: 1200px) {}

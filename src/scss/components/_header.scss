@@ -39,7 +39,7 @@
 
     &__user {
         margin-left: auto;
-        margin-right: 45px;
+        margin-right: 25px;
         display: flex;
         align-items: center;
 
@@ -54,10 +54,8 @@
             @include fregular400;
             font-size: 16px;
             line-height: 22px;
-            margin-right: 19px;
+            margin-right: 17px;
             cursor: pointer;
-            padding-left: 9px;
-            padding-right: 10px;
             padding-top: 5px;
             padding-bottom: 5px;
             transition: 0.2s;
@@ -75,11 +73,7 @@
             align-items: center;
             position: relative;
             z-index: 3;
-            padding-right: 26px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            transition: 0.2s;
-
+            padding-right: 25px;
             &-icon {
                 margin-right: 5px;
                 margin-top: 3px;
@@ -95,7 +89,7 @@
                 @include fregular400;
                 font-size: 16px;
                 line-height: 22px;
-                margin-right: 3px;
+                margin-right: 4px;
 
                 &-sublist {
                     position: absolute;
@@ -103,13 +97,11 @@
                     background-color: white;
                     padding-top: 37px;
                     width: 100%;
-                    top: -2000%;
+                    display: none;
                     right: 0px;
                     padding-left: 30px;
                     padding-bottom: 24px;
                     border-radius: 0px 0px 5px 5px;
-                    transition: 0.2s;
-
                     &-item {
                         margin-top: 15px;
 
@@ -141,14 +133,6 @@
 
         &-search {
             margin-top: 3px;
-            &:hover {
-                
-            }
-            svg {
-                &:hover {
-                   
-                }
-            }
         }
     }
 
@@ -228,20 +212,16 @@
     background-color: white;
     max-width: 203px;
     width: 100%;
-    padding-right: 26px;
     padding-top: 10px;
     padding-bottom: 10px;
-    transition: 0.2s;
 }
 
 .sublist-active {
-    top: 40px;
-    transition: 0.2s;
+    display: block;
 }
 
 .catalog-block {
     top: 80px;
-    transition: 0.5s;
 
     @media screen and (max-width: 639px) {
         top: 120px;
@@ -273,14 +253,12 @@
     }
 }
 
+@media screen and (max-width: 1160px) {}
+
 @media screen and (max-width: 959px) {
     .header {
-        padding-left: 10px;
-        padding-right: 10px;
 
-        &__container {
-            // justify-content: space-between;
-        }
+        &__container {}
 
         &__user {
             margin: auto;
@@ -407,6 +385,32 @@
         }
 
         &__logo {}
+    }
+}
+
+@media screen and (max-width: 536px) {
+    .header {
+        &__user {
+            &-icon {
+                margin-right: 6px;
+                max-width: 18px;
+            }
+        }
+        &__interactive{
+            &-search{
+                margin-right: 14px;
+                max-width: 16px;
+            }
+            &-busket{
+                max-width: 21px;
+            }
+        }
+        &__burger{
+            margin-left: 13px;
+            span{
+                max-width: 16px;
+            }
+        }
     }
 }
 

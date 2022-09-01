@@ -6,6 +6,7 @@
     &__top {
         display: flex;
         justify-content: space-between;
+
         &-title {
             font-size: 46px;
             line-height: 63px;
@@ -24,7 +25,8 @@
             color: white;
             border-radius: 10px;
             transition: 0.5s;
-            &:hover{
+
+            &:hover {
                 background-color: white;
                 color: black;
                 transition: 0.5s;
@@ -37,8 +39,8 @@
         flex-wrap: wrap;
         gap: 40px;
         margin-top: 40px;
+
         &-card {
-            display: block;
             position: relative;
             background-color: white;
             max-width: 260px;
@@ -48,23 +50,72 @@
             @include fmedium500;
             border: 2px solid transparent;
             cursor: pointer;
-
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
             &:hover {
                 border: 2px solid #DE701D;
             }
-            &:hover &-name{
+
+            &:hover &-name {
                 color: #DE701D;
             }
+
             &-name {
-                margin-left: 20px;
+                position: absolute;
+                top: 20px;
+                left: 30px;
                 font-size: 20px;
                 line-height: 27px;
                 color: black;
             }
 
             &-pic {
+                max-width: 260px;
                 display: flex;
-                justify-content: flex-end;
+                align-items: flex-end;
+            }
+            &-img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .catalog-main {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &__container {
+            gap: 32px;
+            justify-content: baseline;
+            &-card{
+                max-width: 211px;
+                max-height: 211px;
+                &-pic{
+                    max-width: 211px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .catalog-main {
+        &__container {
+            max-width: 940px;
+            width: 100%;
+            margin: 0 auto;
+            gap: 32px;
+            // justify-content: center;
+            &-card{
+                max-width: 211px;
+                max-height: 211px;
+                &-pic{
+                    max-width: 211px;
+                }
             }
         }
     }

@@ -87,12 +87,12 @@
 
 @media screen and(max-width: 1200px) {
     .catalog {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
-@media screen and(max-width: 960px) {
+@media screen and(max-width: 1160px) {
     .catalog {
         &__cards {
             gap: 32px;

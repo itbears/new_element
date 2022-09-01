@@ -1,0 +1,156 @@
+.delivery {
+    background-color: #EAEAEA;
+
+    &__card {
+        display: flex;
+        background-color: white;
+        border-radius: 25px;
+        margin-top: 40px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-right: 79px;
+        padding-left: 60px;
+        justify-content: space-between;
+
+        &:first-child {
+            margin-top: 0px;
+        }
+
+        &-title {
+            font-size: 24px;
+            line-height: 33px;
+            max-width: 240px;
+            @include fsemiBold600;
+        }
+
+        &-content {
+            max-width: 781px;
+
+            &-text {
+                font-size: 18px;
+                line-height: 145%;
+                @include flight300;
+            }
+
+            &-logos {
+                display: flex;
+                margin-top: 38px;
+                margin-bottom: 44px;
+            }
+
+            &-logo {
+                margin-left: 29px;
+
+                &:first-child {
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .delivery {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .delivery {
+        &__card {
+            padding-top: 49px;
+            padding-right: 62px;
+            padding-bottom: 49px;
+            padding-left: 49px;
+
+            &-title {
+                font-size: 22px;
+                margin-right: 20px;
+            }
+
+            &-content {
+                &-text {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 806px) {
+    .delivery {
+        &__card {
+            padding: 30px 30px 30px 30px;
+            &-title {
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            &-content {
+                &-text {
+                    font-size: 14px;
+                    line-height: 145%;
+                }
+                &-logos{
+                    margin-top: 17px;
+                    margin-bottom: 31px;
+                }
+                &-logo{
+                    max-width: 60px;
+                    svg{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 536px) {
+    .delivery{
+        &__card {
+            flex-direction: column;
+            &-title {
+                margin-right: 0px;
+                margin-bottom: 20px;
+            }
+
+            &-content {
+                &-text {
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 366px) {
+    .delivery{
+        padding: 20px 20px 25px 20px;
+        &__card {
+            &-title {
+                max-width: 123px;
+            }
+
+            &-content {
+                &-text {
+                    max-width: 260px;
+                    font-size: 12px;
+                }
+                &-logos{
+                    flex-wrap: wrap;
+                }
+                &-logo{
+                    max-width: 60px;
+                    max-width: 52px;
+                    margin-left: 0px;
+                    margin-right: 26px;
+                    &:last-child{
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
