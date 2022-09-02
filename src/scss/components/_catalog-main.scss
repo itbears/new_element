@@ -2,6 +2,7 @@
     background-color: #121212;
     padding-top: 80px;
     padding-bottom: 80px;
+    position: relative;
 
     &__top {
         display: flex;
@@ -12,6 +13,8 @@
             line-height: 63px;
             @include fsemiBold600;
             color: white;
+            position: relative;
+            z-index: 2;
         }
 
         &-link {
@@ -25,35 +28,37 @@
             color: white;
             border-radius: 10px;
             transition: 0.5s;
+            position: relative;
+            z-index: 2;
 
             &:hover {
                 background-color: white;
                 color: black;
-                transition: 0.5s;
+                transition: 0.3s;
             }
         }
     }
 
     &__container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 40px;
         margin-top: 40px;
 
         &-card {
-            position: relative;
-            background-color: white;
             max-width: 260px;
             width: 100%;
-            padding-top: 20px;
             border-radius: 20px;
             @include fmedium500;
             border: 2px solid transparent;
             cursor: pointer;
-            overflow: hidden;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
+            background-image: url('../images/catalog-jpg.jpg');
+            height: 260px;
+            padding-top: 20px;
+            padding-left: 20px;
+
             &:hover {
                 border: 2px solid #DE701D;
             }
@@ -63,9 +68,6 @@
             }
 
             &-name {
-                position: absolute;
-                top: 20px;
-                left: 30px;
                 font-size: 20px;
                 line-height: 27px;
                 color: black;
@@ -76,27 +78,40 @@
                 display: flex;
                 align-items: flex-end;
             }
-            &-img{
+
+            &-img {
                 width: 100%;
             }
         }
+    }
+
+    &__element {
+        position: absolute;
+        z-index: 1;
+        top: 0px;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .catalog-main {
-        padding-left: 20px;
         padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .catalog-main {
+        padding-right: 0px;
+        padding-left: 0px;
+
+        .wrapper {
+            max-width: 940px;
+        }
 
         &__container {
-            gap: 32px;
-            justify-content: baseline;
-            &-card{
+            &-card {
                 max-width: 211px;
                 max-height: 211px;
-                &-pic{
-                    max-width: 211px;
-                }
             }
         }
     }
@@ -104,17 +119,71 @@
 
 @media screen and (max-width: 960px) {
     .catalog-main {
+        .wrapper {
+            max-width: 620px;
+        }
+
         &__container {
-            max-width: 940px;
-            width: 100%;
-            margin: 0 auto;
-            gap: 32px;
-            // justify-content: center;
-            &-card{
-                max-width: 211px;
-                max-height: 211px;
-                &-pic{
-                    max-width: 211px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 28px;
+
+            &-card {
+                max-width: 188px;
+                max-height: 188px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .catalog-main {
+        .wrapper {
+            max-width: 460px;
+        }
+
+        &__container {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
+
+            &-card {
+                max-width: 215px;
+                max-height: 215px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .catalog-main {
+        .wrapper {
+            max-width: 300px;
+        }
+
+        &__top {
+            &-title {
+                font-size: 25px;
+                line-height: 34px;
+            }
+
+            &-link {
+                font-size: 12.4669px;
+                line-height: 17px;
+                padding: 8px 14px;
+            }
+        }
+
+        &__container {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 18px;
+
+            &-card {
+                padding: 10px 10px;
+                max-width: 141px;
+                max-height: 141px;
+
+                &-name {
+                    font-size: 14px;
+                    line-height: 19px;
                 }
             }
         }

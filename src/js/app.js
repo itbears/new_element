@@ -13,9 +13,9 @@ new Swiper('.swiper-slider', {
     },
     spaceBetween: 1000,
     loop: true,
-    autoplay: {
-        delay: 1000,
-    },
+    // autoplay: {
+    //     delay: 1000,
+    // },
     speed: 800,
 });
 

@@ -2,8 +2,6 @@
     background-color: #1B1B1B;
     padding-top: 70px;
     padding-bottom: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
 
     .wrapper {
         max-width: 1040px;
@@ -39,12 +37,16 @@
                 display: flex;
                 background-color: #5C5C5C;
                 max-width: 105px;
-                max-height: 44px;
+                height: 44px;
                 align-items: center;
                 padding: 11px 10px 11px 9px;
                 border-radius: 10px;
                 box-sizing: border-box;
-                margin-bottom: 25px;
+                margin-bottom: 17px;
+            }
+
+            &-pic {
+                height: 20px;
             }
 
             &-title {
@@ -53,14 +55,16 @@
                 font-size: 18px;
                 line-height: 25px;
                 margin-bottom: 25px;
+                height: 24px;
+                margin-top: 11px;
 
                 &:last-child {
                     @include fextraLight200;
                     font-size: 16px;
                     line-height: 22px;
+                    margin-top: 0px;
                     margin-bottom: 0px;
                     margin-left: 5px;
-                    margin-bottom: 5px;
                 }
             }
 
@@ -127,8 +131,12 @@
     }
 }
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 1160px) {
     .footer {
+        .wrapper {
+            max-width: 940px;
+        }
+
         &__visa {
             max-width: 51px;
         }
@@ -183,18 +191,23 @@
     }
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 960px) {
     .footer {
+        .wrapper {
+            max-width: 460px;
+        }
+
         &__bottom {
             flex-wrap: wrap;
             justify-content: center;
             padding-top: 17px;
+
             &-text {
-            order: 2;
+                order: 2;
             }
 
             &-politic {
-               order: 3;
+                order: 3;
             }
 
             &-logos {
@@ -216,9 +229,7 @@
                 }
 
                 &-title {
-                    &:last-child {
-                        margin-bottom: 25px;
-                    }
+                    &:last-child {}
 
                     margin-top: 40px;
                 }
@@ -235,51 +246,61 @@
     }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 480px) {
     .footer {
-        &__bottom{
+        .wrapper {
+            max-width: 300px;
+        }
+
+        &__bottom {
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
-            &-text{
+
+            &-text {
                 margin-right: 0px;
                 font-size: 12px;
             }
-            &-politic{
+
+            &-politic {
                 margin-left: 0px;
                 margin-top: 3px;
                 font-size: 12px;
             }
-            &-logos{
+
+            &-logos {
                 max-width: 242px;
             }
-            &-logo{
+
+            &-logo {
                 height: 54px;
             }
         }
-        &__container {
 
+        &__container {
             &-box {
                 max-width: 139px;
-
-                &:last-child {
-                    max-width: 100%;
+                &-title {
+                    margin-top: 12px;
                 }
 
-                &-last-wrapper {
-                    display: block;
-                }
-            }
-        }
-    }
-}
+                // &-list {
+                //     &:last-child {
+                //         margin-bottom: 40px;
+                //     }
+                // }
 
-@media screen and (max-width: 361px) {
-    .footer {
-        &__container {
-            &-box {
                 &:first-child {
                     margin-right: 28px;
+
+                    &:last-child {
+                        max-width: 100%;
+                    }
+
+                    &-last-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                    }
                 }
             }
         }
