@@ -20,49 +20,42 @@ button {
     background: none;
 }
 
-// h1,
-// h2,
-// h3,
-// h4 {
-//     color: $black;
-// }
-
-// h1 {
-//     @include fsemiBold600;
-//     font-size: 50px;
-//     line-height: 130%;
-// }
-
-// h2 {
-//     @include fsemiBold600;
-//     font-size: 46px;
-//     line-height: 63px;
-// }
-
-// h3 {
-//     @include fsemiBold600;
-//     font-size: 40px;
-//     line-height: 130%;
-//     text-transform: uppercase;
-// }
-
-// h4 {
-//     @include fsemiBold600;
-//     font-size: 30px;
-//     line-height: 130%;
-// }
-.wrapper{
+.wrapper {
     max-width: 1160px;
     margin: 0px auto;
     width: 100%;
 }
-.display-block{
+.display-block {
     display: block;
 }
 .unselectable {
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none;  
-    -khtml-user-select: none;  
-    -ms-user-select: none;    
-    user-select: none;                                       
-  }
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        max-width: 940px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .wrapper {
+        max-width: 620px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .wrapper {
+        max-width: 460px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        max-width: 300px;
+    }
+}
