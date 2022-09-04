@@ -1,12 +1,7 @@
 .footer {
-    background-color: #1B1B1B;
+    background-color: #1b1b1b;
     padding-top: 70px;
     padding-bottom: 30px;
-
-    .wrapper {
-        max-width: 1040px;
-        width: 100%;
-    }
 
     &__inner {
         display: flex;
@@ -35,7 +30,7 @@
         &-box {
             &-wrapper-title {
                 display: flex;
-                background-color: #5C5C5C;
+                background-color: #5c5c5c;
                 max-width: 105px;
                 height: 44px;
                 align-items: center;
@@ -54,7 +49,7 @@
                 @include fsemiBold600;
                 font-size: 18px;
                 line-height: 25px;
-                margin-bottom: 25px;
+                margin-bottom: 27px;
                 height: 24px;
                 margin-top: 11px;
 
@@ -131,12 +126,9 @@
     }
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 980px) {
     .footer {
-        .wrapper {
-            max-width: 940px;
-        }
-
+        padding-bottom: 0;
         &__visa {
             max-width: 51px;
         }
@@ -154,6 +146,7 @@
         }
 
         &__bottom {
+            padding-top: 0;
             &-text {
                 font-size: 14px;
                 line-height: 19px;
@@ -169,6 +162,7 @@
             &-logos {
                 max-width: 242px;
                 align-items: flex-end;
+                padding-top: 7px;
             }
 
             &-logo {
@@ -181,7 +175,6 @@
 
         &__inner {
             flex-direction: column;
-
         }
 
         &__container {
@@ -191,16 +184,12 @@
     }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 660px) {
     .footer {
-        .wrapper {
-            max-width: 460px;
-        }
-
         &__bottom {
             flex-wrap: wrap;
             justify-content: center;
-            padding-top: 17px;
+            padding-bottom: 20px;
 
             &-text {
                 order: 2;
@@ -229,7 +218,8 @@
                 }
 
                 &-title {
-                    &:last-child {}
+                    &:last-child {
+                    }
 
                     margin-top: 40px;
                 }
@@ -246,12 +236,8 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
     .footer {
-        .wrapper {
-            max-width: 300px;
-        }
-
         &__bottom {
             flex-direction: column;
             align-items: flex-start;
@@ -283,12 +269,14 @@
                 &-title {
                     margin-top: 12px;
                 }
+                &-last-wrapper {
+                    flex-direction: column;
+                }
 
-                // &-list {
-                //     &:last-child {
-                //         margin-bottom: 40px;
-                //     }
-                // }
+                &:last-child {
+                    margin-top: 40px;
+                    max-width: 100%;
+                }
 
                 &:first-child {
                     margin-right: 28px;
