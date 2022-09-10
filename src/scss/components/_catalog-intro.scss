@@ -6,6 +6,7 @@
     height: 309px;
     border-radius: 25px;
     background-color: #EAEAEA;
+
     &__container {
         display: flex;
         align-items: center;
@@ -17,7 +18,7 @@
     }
 
     &__title {
-        @include fsemiBold600;
+        @include flight300;
         font-size: 40px;
         line-height: 130%;
         color: white;
@@ -34,10 +35,11 @@
 }
 
 @media screen and(max-width: 1200px) {
-    .catalog-intro{
+    .catalog-intro {
         padding-right: 10px;
         padding-left: 10px;
-        &__title{
+
+        &__title {
             font-size: 35px;
             margin-right: 83px;
         }
@@ -45,34 +47,45 @@
 }
 
 @media screen and(max-width: 959px) {
-    .catalog-intro{
-        &__title{
+    .catalog-intro {
+        &__title {
             font-size: 35px;
             margin-right: 83px;
         }
     }
 }
 
-@media screen and(max-width: 639px) {
-    .catalog-intro{
-        &__container{
+@media screen and(max-width: 660px) {
+    .catalog-intro {
+        &__container {
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
         }
-        &__title{
+
+        &__title {
             font-size: 28px;
             margin-right: 0px;
             margin-bottom: 20px;
         }
+
+        &__text {
+            max-width: 412px;
+        }
     }
 }
 
-@media screen and(max-width: 479px) {
-    .catalog-intro{
-        &__title{
+@media screen and(max-width: 500px) {
+    .catalog-intro {
+        &__title {
             font-size: 25px;
-            margin-bottom: 10px;
+            line-height: 130%;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 145%;
+            max-width: 300px;
         }
     }
 }

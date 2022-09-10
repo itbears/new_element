@@ -1,8 +1,11 @@
 .catalog {
-    padding-top: 100px;
     background-color: #EAEAEA;
-    padding-bottom: 100px;
+    padding-bottom: 130px;
+    position: relative;
+    overflow: hidden;
     &__introduction {
+        position: relative;
+        z-index: 10;
         background-color: #1B1B1B;
         width: 100%;
         border-radius: 25px;
@@ -12,6 +15,7 @@
         align-items: center;
         box-sizing: border-box;
         margin-top: 80px;
+
         &-title {
             @include fsemiBold600;
             font-size: 24px;
@@ -30,29 +34,51 @@
             line-height: 145%;
             max-width: 700px;
             color: white;
-            margin-right: 100px;
         }
     }
 
     &__cards {
-        display: flex;
-        gap: 40px;
-        flex-wrap: wrap;
+        display: grid;
+        grid-gap: 40px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         margin-top: 40px;
+        position: relative;
+        z-index: 10;
     }
 
     &__card {
-        background-color: #1B1B1B;
-        border-radius: 25px;
         position: relative;
-        display: flex;
+        z-index: 10;
+        border-radius: 25px;
+        overflow: hidden;
+        position: relative;
         max-width: 260px;
         width: 100%;
         max-height: 260px;
         height: 100%;
+        height: 260px;
         color: white;
+        box-sizing: border-box;
+        border: 2px solid transparent;
+
+        &:hover {
+            border: 2px solid #DE701D;
+        }
+
+        &:hover &-name {
+            color: #DE701D;
+        }
+
+        &-img {
+            position: absolute;
+            background-color: #1B1B1B;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
 
         &-all {
+            background-color: #1B1B1B;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -65,76 +91,109 @@
             height: 100%;
             padding: 117px 45px;
 
+            &:hover {
+                color: #DE701D;
+            }
         }
 
         &-name {
-            position: absolute;
-            top: 20px;
-            left: 20px;
+            margin-top: 20px;
+            margin-left: 20px;
+            position: relative;
+            z-index: 10;
             max-width: 207px;
-            @include fmedium500;
+            @include fextraLight200;
             font-size: 20px;
             line-height: 27px;
         }
+    }
 
-        &-pic {}
+    &__element-lu {
+        position: absolute;
+        top: 30px;
+        left: 0px;
+    }
 
-        &-img {
-            width: 100%;
-        }
+    &__element-ru {
+        position: absolute;
+        right: 0px;
+        top: 1200px;
+    }
+
+    &__element-ld {
+        position: absolute;
+        left: 0px;
+        bottom: 1550px;
+    }
+
+    &__element-rd {
+        position: absolute;
+        bottom: -500px;
+        right: 0px;
     }
 }
 
 @media screen and(max-width: 1200px) {
     .catalog {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
+        &__introduction {
+            padding-top: 64px;
+            padding-bottom: 64px;
 
-@media screen and(max-width: 1160px) {
-    .catalog {
+            &-title {
+                margin-left: 60px;
+                margin-right: 110px;
+            }
+
+            &-text {
+                max-width: 578px;
+            }
+        }
+
         &__cards {
-            gap: 32px;
+            grid-gap: 32px;
         }
 
         &__card {
             max-width: 211px;
-            max-height: 211px;
+            height: 211px;
 
             &-name {
                 font-size: 18px;
-                max-width: 168px;
-                top: 16px;
-                left: 16px;
                 line-height: 25px;
             }
 
             &-all {
-                padding: 93px 35px;
                 font-size: 18px;
+                line-height: 25px;
+                padding: 93px 32px;
             }
         }
     }
 }
 
-@media screen and(max-width: 959px) {
+@media screen and(max-width: 980px) {
     .catalog {
         &__introduction {
+            padding-top: 49px;
+            padding-bottom: 49px;
+
             &-title {
                 margin-left: 30px;
                 margin-right: 72px;
                 font-size: 22px;
+                line-height: 30px;
             }
 
             &-text {
-                margin-right: 30px;
+                max-width: 350px;
                 font-size: 16px;
+                line-height: 145%;
             }
         }
 
         &__cards {
             gap: 28px;
+            grid-template-columns: 1fr 1fr 1fr;
         }
 
         &__card {
@@ -142,42 +201,44 @@
             max-height: 188px;
 
             &-name {
-                max-width: 155px;
-                font-size: 16px;
-                top: 14px;
-                left: 14px;
-                line-height: 22px;
+                margin-top: 14px;
+                margin-left: 14px;
+                max-width: 150px;
             }
 
             &-all {
                 padding: 83px 31px;
-                font-size: 16px;
+                white-space: nowrap;
             }
         }
     }
 }
 
-@media screen and(max-width: 639px) {
+@media screen and(max-width: 660px) {
     .catalog {
         &__introduction {
+            padding-top: 71px;
+            padding-bottom: 71px;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
+            padding-left: 25px;
 
             &-title {
-                margin-left: 25px;
+                margin-left: 0px;
+                margin-right: 0px;
+                font-size: 22px;
+                line-height: 30px;
             }
 
             &-text {
-                margin-left: 25px;
-                margin-right: 25px;
-                margin-top: 29px;
                 max-width: 411px;
+                margin-top: 20px;
             }
         }
 
         &__cards {
-            gap: 30px;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px;
         }
 
         &__card {
@@ -185,25 +246,31 @@
             max-height: 215px;
 
             &-name {
-                top: 17px;
-                left: 17px;
+                margin-top: 17px;
+                margin-left: 17px;
+                max-width: 171px;
             }
 
-            &-all {}
+            &-all {
+                font-size: 16px;
+                line-height: 22px;
+            }
         }
     }
 }
 
-@media screen and(max-width: 479px) {
+@media screen and(max-width: 500px) {
     .catalog {
         &__introduction {
-            &-title {
-                margin-left: 15px;
-            }
+            padding-top: 63px;
+            padding-bottom: 63px;
+            padding-left: 15px;
 
             &-text {
-                margin-left: 15px;
-                margin-right: 10px;
+                margin-top: 15px;
+                font-size: 14px;
+                line-height: 145%;
+                max-width: 275px;
             }
         }
 
@@ -214,29 +281,21 @@
         &__card {
             max-width: 141px;
             max-height: 141px;
+
             &-name {
                 font-size: 14px;
                 line-height: 19px;
-                top: 11px;
-                left: 11px;
+            }
+
+            &-name {
+                margin-top: 11px;
+                margin-left: 11px;
             }
 
             &-all {
-                font-size: 14px;
                 padding: 61px 16px;
-            }
-        }
-    }
-}
-
-@media screen and(max-width: 360px) {
-    .catalog {
-        &__introduction {
-            &-text {
-                margin-left: 15px;
-                margin-right: 10px;
                 font-size: 14px;
-                max-width: 275px;
+                line-height: 19px;
             }
         }
     }

@@ -1,16 +1,21 @@
 .about-activity {
     background-color: #EAEAEA;
     padding-top: 80px;
+
     &__title {
         @include fsemiBold600;
         font-size: 46px;
         line-height: 63px;
         margin-bottom: 50px;
+        position: relative;
+        z-index: 1;
     }
 
     &__description {
         display: flex;
         justify-content: space-between;
+        position: relative;
+        z-index: 1;
 
         &-inner {
             &:last-child {
@@ -32,13 +37,19 @@
 
     &__advantages {
         margin-top: 50px;
-        &-bunner{
-            max-width: 1160px;
+        position: relative;
+        z-index: 1;
+
+        &-bunner {
+            background-image: url('../images/about-bunner.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 100%;
             width: 100%;
-            &-img{
-                width: 100%;
-            }
+            border-radius: 30px;
+            height: 379px;
         }
+
         &-container {
             display: flex;
             justify-content: space-between;
@@ -52,7 +63,6 @@
             max-width: 260px;
             width: 100%;
             display: flex;
-            justify-content: center;
             flex-direction: column;
             align-items: center;
             border-radius: 30px;
@@ -68,19 +78,42 @@
             }
         }
     }
+
+    &__element-right {
+        position: absolute;
+        right: 0px;
+        top: 600px;
+        z-index: 0;
+    }
 }
 
 @media screen and(max-width: 1200px) {
     .about-activity {
-        padding-left: 20px;
-        padding-right: 20px;
+        &__element-right {
+            display: none;
+        }
+
+        &__title {
+            font-size: 35px;
+            line-height: 48px;
+        }
+
+        &__description {
+            &-text {
+                font-size: 20px;
+                line-height: 27px;
+            }
+        }
 
         &__advantages {
             display: flex;
             flex-direction: column-reverse;
-            &-bunner{
+            margin-top: 80px;
+
+            &-bunner {
                 margin-bottom: 80px;
             }
+
             &-card {
                 display: flex;
                 max-width: 223px;
@@ -90,35 +123,33 @@
 
                 &-pic {
                     max-width: 34px;
+                    height: 34px;
+                }
+
+                &-img {
+                    width: 100%;
+                    height: 100%;
                 }
 
                 &-text {
                     font-size: 17.1273px;
                     line-height: 23px;
                     max-width: 199px;
+                    margin-top: 13px;
                 }
             }
         }
     }
 }
 
-@media screen and(max-width: 1065px) {
+@media screen and(max-width: 980px) {
     .about-activity {
-        padding-left: 10px;
-        padding-right: 10px;
-
-        &__description {
-            &-text {
-                max-width: 460px;
-                font-size: 20px;
-                line-height: 27px;
-            }
+        &__title {
+            font-size: 35px;
+            line-height: 48px;
+            margin-bottom: 40px;
         }
-    }
-}
 
-@media screen and(max-width: 959px) {
-    .about-activity {
         &__description {
             flex-direction: column;
 
@@ -154,25 +185,42 @@
                 &-text {
                     font-size: 22.1429px;
                     line-height: 30px;
+                    max-width: 259px;
+                    margin-top: 17px;
                 }
             }
         }
     }
 }
 
-@media screen and(max-width: 639px) {
+@media screen and(max-width: 660px) {
     .about-activity {
+        &__title {
+            font-size: 30px;
+            line-height: 41px;
+            margin-bottom: 25px;
+        }
+
+        &__description {
+            &-text {
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+
         &__advantages {
             &-container {
-                gap: 16px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 17px;
             }
 
             &-card {
-                max-width: 222px;
-                width: 100%;
+                max-width: 223px;
 
                 &-pic {
-                    max-width: 34px;
+                    width: 34px;
+                    height: 34px;
                 }
 
                 &-text {
@@ -185,51 +233,7 @@
     }
 }
 
-@media screen and(max-width: 589px) {
-    .about-activity {
-        &__title {
-            font-size: 30px;
-            line-height: 41px;
-        }
-
-        &__description {
-            &-text {
-                font-size: 18px;
-                line-height: 25px;
-            }
-        }
-    }
-}
-
-@media screen and(max-width: 479px) {
-    .about-activity {
-        &__advantages {
-            &-container{
-                gap: 12px;
-                justify-content: space-evenly;
-            }
-            &-card {
-                padding-top: 23px;
-                padding-bottom: 23px;
-                max-width: 143px;
-                width: 100%;
-
-                &-pic {
-                    max-width: 21px;
-                    width: 100%;
-                }
-
-                &-text {
-                    max-width: 128px;
-                    font-size: 11.0499px;
-                    line-height: 15px;
-                }
-            }
-        }
-    }
-}
-
-@media screen and(max-width: 451px) {
+@media screen and(max-width: 500px) {
     .about-activity {
         &__title {
             font-size: 25px;
@@ -237,9 +241,52 @@
         }
 
         &__description {
-            &-text {
+            &_text {
                 font-size: 16px;
-                line-height: 22px
+                line-height: 22px;
+            }
+        }
+
+        &__advantages {
+            &-bunner {
+                height: 238px;
+                border-radius: 30px;
+                overflow: hidden;
+
+                &-img {
+                    // border-radius: 30px;
+                }
+            }
+
+            &-container {
+                grid-gap: 10.97px;
+
+            }
+
+            &-card {
+                padding: 0px;
+                max-width: 143.87px;
+                height: 104px;
+                border-radius: 16.5748px;
+                padding-top: 22px;
+
+                &-pic {
+                    max-width: 21px;
+                    height: 21px;
+                }
+
+                &-img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &-text {
+                    font-size: 11.0499px;
+                    line-height: 15px;
+                    margin-top: 0px;
+                    max-width: 128px;
+                    margin-top: 11px;
+                }
             }
         }
     }

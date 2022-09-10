@@ -54,7 +54,8 @@
             &-city {
                 font-size: 25px;
                 line-height: 145%;
-                @include fsemiBold600;
+                font-weight: 600;
+                @include fbold700;
                 color: #121212;
             }
 
@@ -74,7 +75,7 @@
                     font-size: 14px;
                     line-height: 19px;
                     color: #808080;
-                    @include fregular400;
+                    @include fextraLight200;
                     margin-bottom: 10px;
                 }
 
@@ -82,7 +83,7 @@
                     font-size: 18px;
                     line-height: 145%;
                     color: #121212;
-                    @include fregular400;
+                    @include fmedium500;
                 }
 
                 &-item-number {
@@ -94,10 +95,10 @@
                 &-link {
                     color: #121212;
                     box-sizing: border-box;
-                    border-bottom: 1px solid transparent;
-
+                    border-bottom: 1px solid #DE701D;
+                    padding-bottom: 3px;
                     &:hover {
-                        border-bottom: 1px solid #DE701D;
+                        color: #DE701D; 
                     }
                 }
             }

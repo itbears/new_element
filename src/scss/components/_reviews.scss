@@ -1,11 +1,13 @@
 .reviews {
-    background-color: #EAEAEA;
-    padding-top: 130px;
     padding-bottom: 130px;
+    overflow: hidden;
+    position: relative;
+
     &__container {
         display: flex;
         flex-wrap: wrap;
         gap: 40px;
+        margin-bottom: 80px;
     }
 
     &__title {
@@ -18,18 +20,19 @@
     &__item {
         max-width: 560px;
         width: 100%;
+        height: 334px;
         background-color: white;
         padding-left: 60px;
         border-radius: 30px;
-        padding-bottom: 60px;
         padding-top: 60px;
+        position: relative;
     }
 
     &__name {
-        @include fregular400;
+        @include fextraLight200;
         font-size: 25px;
         line-height: 34px;
-        border-bottom: 1px solid orange;
+        border-bottom: 1px solid #DE701D;
         display: inline-block;
         padding-bottom: 5px;
     }
@@ -39,7 +42,6 @@
         font-size: 18px;
         line-height: 25px;
         margin-top: 5px;
-        margin-bottom: 20px;
         max-width: 440px
     }
 
@@ -47,11 +49,17 @@
         @include fextraLight200;
         font-size: 18px;
         line-height: 25px;
-        color: #EAEAEA;
+        color: #808080;
+        display: inline-block;
+        margin-top: auto;
+        position: absolute;
+        bottom: 60px;
     }
 
     &__request {
-        background-image: url('../images/back-request.jpg');
+        position: relative;
+        z-index: 1;
+        background-image: url('../images/about-request.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -59,10 +67,9 @@
         display: flex;
         align-items: center;
         background-color: #C4C4C4;
-        border-radius: 25px;
+        border-radius: 28px;
         flex-direction: column;
         justify-content: center;
-        margin-top: 80px;
 
         &-title {
             font-size: 30px;
@@ -91,6 +98,165 @@
             color: white;
             padding: 12px 20px;
             border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                color: #121212;
+                background-color: #ffffff;
+                transition: 0.3s
+            }
+        }
+    }
+
+    &__element-left {
+        position: absolute;
+        bottom: -500px;
+        z-index: 0;
+        left: 0px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .reviews {
+        &__element-left {
+            display: none;
+        }
+
+        &__title {
+            font-size: 35px;
+            line-height: 48px;
+        }
+
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 33px;
+        }
+
+        &__item {
+            padding-left: 48px;
+            padding-top: 43px;
+        }
+
+        &__name {
+            font-size: 23px;
+            line-height: 31px;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 22px;
+            max-width: 355px;
+        }
+
+        &__date {
+            bottom: 42px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .reviews {
+        &__container {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 30px;
+            overflow-x: scroll;
+        }
+
+        &__item {
+            padding-left: 48px;
+            padding-top: 43px;
+            max-width: 452px;
+            width: 100%;
+            padding-right: 49px;
+            height: 270px;
+        }
+
+        &__name {
+            font-size: 23px;
+            line-height: 31px;
+            white-space: nowrap;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 22px;
+            width: 355px;
+        }
+
+        &__date {
+            bottom: 42px;
+        }
+
+        &__request {
+            &-button {
+                font-size: 12px;
+                line-height: 16px;
+                padding: 9px 39px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .reviews {
+        &__container {
+            gap: 10px;
+        }
+
+        &__item {
+            padding-right: 40px;
+        }
+
+        &__title {
+            font-size: 30px;
+            line-height: 41px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .reviews {
+        &__container {
+            gap: 10px;
+        }
+
+        &__item {
+            padding-left: 30px;
+            padding-top: 30px;
+            padding-right: 30px;
+        }
+
+        &__title {
+            font-size: 25px;
+            line-height: 34px;
+        }
+
+        &__text {
+            width: 239px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        &__date {
+            bottom: 27px;
+        }
+
+        &__request {
+            
+            &-title {
+                font-size: 25px;
+                line-height: 34px
+            }
+
+            &-text {
+                font-size: 16px;
+                line-height: 22px;
+            }
         }
     }
 }
