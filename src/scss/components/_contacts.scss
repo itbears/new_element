@@ -2,23 +2,21 @@
     background-color: #EAEAEA;
     padding-top: 40px;
     padding-bottom: 80px;
-
     &__list-wrapper {
-        padding-top: 30px;
-        padding-bottom: 30px;
         background-color: #ffffff;
-        margin-bottom: 40px;
         border-radius: 25px;
         max-width: 100%;
+        margin-bottom: 40px;
         width: 100%;
-        padding-left: 20px;
     }
 
     &__list {
+        padding-top: 30px;
+        padding-bottom: 30px;
         max-width: 100%;
         width: 100%;
+        padding-left: 61px;
         display: flex;
-        justify-content: center;
         align-items: center;
         gap: 20px;
         &-item {
@@ -125,6 +123,8 @@
 @media screen and (max-width: 1200px) {
     .contacts {
         &__list {
+            padding-left: 30px;
+            gap: 13px;
             &-item {
                 font-size: 16px;
                 line-height: 145%;
@@ -166,12 +166,18 @@
 
 @media screen and (max-width: 980px) {
     .contacts {
+        &__list-wrapper{
+            border-radius: 15px;
+        }
         &__list {
-            overflow-y: scroll;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            overflow-x: scroll;
             flex-wrap: nowrap;
             padding-bottom: 5px;
             justify-content: flex-start;
-
+            padding-top: 30px;
+            padding-bottom: 30px;
             &-item {
                 font-size: 16px;
                 line-height: 145%;
@@ -202,6 +208,12 @@
 @media screen and (max-width: 660px) {
     .contacts {
         &__list {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+          }
             &-item {}
         }
 
@@ -225,8 +237,14 @@
 
 @media screen and (max-width: 500px) {
     .contacts {
+        &__list-wrapper{
+            border-radius: 20px;
+        }
         &__list {
-            &-item {}
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            gap: 10px;
         }
 
         &__information {
