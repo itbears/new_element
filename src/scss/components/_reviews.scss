@@ -15,6 +15,7 @@
         font-size: 46px;
         line-height: 63px;
         margin-bottom: 40px;
+        margin-top: 130px;
     }
 
     &__item {
@@ -74,6 +75,7 @@
         &-title {
             font-size: 30px;
             line-height: 41px;
+            margin-top: 13px;
             color: white;
             @include fsemiBold600;
         }
@@ -126,6 +128,7 @@
         &__title {
             font-size: 35px;
             line-height: 48px;
+            margin-top: 0px;
         }
 
         &__container {

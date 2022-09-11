@@ -2,7 +2,8 @@
     background-color: #1b1b1b;
     padding-top: 70px;
     padding-bottom: 30px;
-
+    position: relative;
+    z-index: 10;
     &__inner {
         display: flex;
     }
