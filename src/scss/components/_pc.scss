@@ -1,0 +1,265 @@
+.pc {
+    padding-bottom: 130px;
+    overflow: hidden;
+    position: relative;
+
+    &__decor {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        svg {
+            height: 100%;
+        }
+    }
+
+    &__title {
+        position: relative;
+        z-index: 10;
+        font-size: 46px;
+        line-height: 63px;
+        color: #121212;
+        @include fsemiBold600;
+        margin-top: 130px;
+        margin-bottom: 40px;
+    }
+
+    &__swiper {
+        position: relative;
+        .swiper-slide {
+            width: auto;
+            height: auto;
+        }
+        .swiper-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+    }
+
+    &__card {
+        max-width: 360px;
+        min-width: 360px;
+        width: 100%;
+        background-color: $white;
+        border-radius: 20px;
+        border: 2px solid transparent;
+        transition: border 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            border: 2px solid #de701d;
+        }
+
+        &-wrapper {
+            padding: 15px;
+        }
+
+        &-pic {
+            margin-bottom: 20px;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-name {
+            @include fmedium500;
+            font-size: 20px;
+            line-height: 27px;
+            max-width: 250px;
+            margin-bottom: 5px;
+        }
+
+        &-number {
+            @include fregular400;
+            color: #808080;
+            font-size: 14px;
+            line-height: 19px;
+            margin-bottom: 15px;
+        }
+
+        &-prices {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 26px;
+        }
+
+        &-now-price {
+            font-size: 24px;
+            line-height: 1.2;
+            color: #121212;
+            @include fsemiBold600;
+        }
+
+        &-past-price {
+            font-size: 16px;
+            line-height: 145%;
+            color: #c0c0c0;
+            @include fregular400;
+            margin-left: 5px;
+        }
+
+        &-buttons {
+            display: flex;
+            justify-content: space-between;
+
+            &-buy {
+                color: $white;
+                background-color: #121212;
+                display: flex;
+                align-items: center;
+                padding: 10px 30px;
+                border-radius: 10px;
+                box-sizing: border-box;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                width: 100%;
+                max-width: 160px;
+                font-size: 14px;
+                line-height: 19px;
+
+                &:hover {
+                    background-color: #de701d;
+                }
+
+                &-pic {
+                    margin-right: 10px;
+                    max-width: 20px;
+
+                    svg {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &-more {
+                color: black;
+                border: 1px solid black;
+                display: flex;
+                align-items: center;
+                @include fregular400;
+                padding: 11px 32px;
+                border-radius: 10px;
+                max-width: 160px;
+                font-size: 14px;
+                line-height: 19px;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 1200px) {
+    .pc {
+        &__title {
+            font-size: 35px;
+        }
+
+        &__swiper {
+            overflow: visible !important;
+            .swiper {
+                overflow: visible;
+            }
+            .swiper-wrapper {
+                gap: initial;
+                flex-wrap: initial;
+            }
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+                min-width: 360px;
+                max-width: 360px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 980px) {
+    .pc {
+        &__title {
+            font-size: 28px;
+            line-height: 38px;
+        }
+        &__decor {
+            right: -240px;
+        }
+    }
+}
+
+@media screen and(max-width: 660px) {
+    .pc {
+        &__title {
+            font-size: 28px;
+            line-height: 38px;
+        }
+    }
+}
+
+@media screen and(max-width: 500px) {
+    .pc {
+        padding-bottom: 80px;
+        &__title {
+            margin-top: 80px;
+        }
+        &__swiper {
+            .swiper-slide {
+                min-width: 240px;
+                max-width: 240px;
+            }
+        }
+        &__card {
+            max-width: 240px;
+            min-width: 240px;
+            &-prices {
+                margin-bottom: 20px;
+            }
+            &-wrapper {
+                padding: 10px;
+            }
+            &-name {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            &-number {
+                font-size: 12px;
+                line-height: 14px;
+            }
+            &-now-price {
+                font-size: 16px;
+            }
+            &-past-price {
+                font-size: 10px;
+            }
+            &-buttons {
+                &-buy {
+                    font-size: 9px;
+                    line-height: 1;
+                    padding: 7px 15px;
+                    white-space: nowrap;
+                    justify-content: center;
+                    max-width: 105px;
+                    &-pic {
+                        min-width: 15px;
+                        margin-right: 5px;
+                        svg {
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+                &-more {
+                    font-size: 9px;
+                    line-height: 2;
+                    padding: 7px 10px;
+                    max-width: 105px;
+                }
+            }
+        }
+    }
+}

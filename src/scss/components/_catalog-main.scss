@@ -3,6 +3,7 @@
     padding-top: 80px;
     padding-bottom: 80px;
     position: relative;
+    overflow: hidden;
 
     &__top {
         display: flex;
@@ -22,7 +23,7 @@
             align-items: center;
             font-size: 18px;
             line-height: 25px;
-            background-color: #DE701D;
+            background-color: #de701d;
             padding: 12px 20px;
             @include fsemiBold600;
             color: white;
@@ -54,23 +55,39 @@
             @include fmedium500;
             border: 2px solid transparent;
             cursor: pointer;
-            background-image: url('../images/catalog-jpg.jpg');
             height: 260px;
             padding-top: 20px;
             padding-left: 20px;
+            position: relative;
+            overflow: hidden;
+            &-pic {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
 
             &:hover {
-                border: 2px solid #DE701D;
+                border: 2px solid #de701d;
             }
 
             &:hover &-name {
-                color: #DE701D;
+                color: #de701d;
             }
 
             &-name {
                 font-size: 20px;
                 line-height: 27px;
                 color: black;
+                position: relative;
+                z-index: 1;
             }
 
             &-pic {
@@ -87,42 +104,29 @@
 
     &__element {
         position: absolute;
-        z-index: 1;
-        top: 0px;
+        bottom: 0;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .catalog-main {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-}
-
-@media screen and (max-width: 1160px) {
-    .catalog-main {
-        padding-right: 0px;
-        padding-left: 0px;
-
-        .wrapper {
-            max-width: 940px;
-        }
-
         &__container {
             &-card {
-                max-width: 211px;
-                max-height: 211px;
+                max-width: 210px;
+                max-height: 210px;
             }
         }
     }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 980px) {
     .catalog-main {
-        .wrapper {
-            max-width: 620px;
+        &__top {
+            align-items: flex-end;
+            &-link {
+                height: 49px;
+            }
         }
-
         &__container {
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 28px;
@@ -135,12 +139,8 @@
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 660px) {
     .catalog-main {
-        .wrapper {
-            max-width: 460px;
-        }
-
         &__container {
             grid-template-columns: 1fr 1fr;
             grid-gap: 30px;
@@ -153,12 +153,8 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
     .catalog-main {
-        .wrapper {
-            max-width: 300px;
-        }
-
         &__top {
             &-title {
                 font-size: 25px;
@@ -168,7 +164,9 @@
             &-link {
                 font-size: 12.4669px;
                 line-height: 17px;
-                padding: 8px 14px;
+                padding: 0 14px;
+                height: 35px;
+                border-radius: 6.92604px;
             }
         }
 

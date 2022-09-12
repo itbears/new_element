@@ -4,11 +4,11 @@ import '../scss/app.scss';
 import 'swiper/css/bundle';
 
 /* Your JS Code goes here */
-new Swiper('.swiper-slider', {
+new Swiper('.js-intro', {
     effect: "fade",
 
     pagination: {
-        el: '.swiper-pagination',
+        el: '.js-intro .swiper-pagination',
         clickable: true,
     },
     spaceBetween: 1000,
@@ -18,6 +18,31 @@ new Swiper('.swiper-slider', {
     // },
     speed: 800,
 });
+
+
+
+function detectDevice() {
+    if (window.innerWidth <= 1200) {
+        // true for mobile device
+        new Swiper('.js-catalog-swiper', {
+            slidesPerView: "auto",
+            spaceBetween: 20,
+            freeMode: true,
+            loop: false,
+            breakpoints: {
+                500: {
+                    spaceBetween: 40
+                }
+            }
+        });
+
+    } else {
+        // false for not mobile device
+
+    }
+}
+
+detectDevice();
 
 // // sublist  
 // let menu = document.querySelector('.header__user-city-item');
