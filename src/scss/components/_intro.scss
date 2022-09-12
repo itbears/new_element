@@ -55,42 +55,36 @@
         width: 10px;
         height: 10px;
     }
-}
 
-.slide-one {
-    background-image: url("../images/intro.jpg");
-}
+    .slide-one {
+        background-image: url("../images/intro.jpg");
+    }
 
-.slide-two {
-    background-image: url("../images/intro-2.jpg");
-}
+    .slide-two {
+        background-image: url("../images/intro-2.jpg");
+    }
 
-.slide-three {
-    background-image: url("../images/intro-3.jpg");
-}
+    .slide-three {
+        background-image: url("../images/intro-3.jpg");
+    }
 
-.swiper-slider {
-    border-radius: 25px;
-    height: 660px;
-}
+    .swiper-slider {
+        border-radius: 25px;
+        height: 660px;
+    }
 
-.swiper-slide {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    background-color: #c4c4c4;
-}
+    .swiper-slide {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        background-color: #c4c4c4;
+    }
 
-.swiper-pagination {
-    margin-bottom: 10px;
-}
-
-.swiper-pagination-bullet {
-    background-color: white;
-    width: 10px;
-    height: 10px;
+    .swiper-pagination {
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
