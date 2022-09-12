@@ -1,5 +1,8 @@
 .delivery {
     background-color: #EAEAEA;
+    padding-bottom: 100px;
+    position: relative;
+    overflow: hidden;
 
     &__card {
         display: flex;
@@ -11,9 +14,11 @@
         padding-right: 79px;
         padding-left: 60px;
         justify-content: space-between;
+        position: relative;
+        z-index: 10;
 
         &:first-child {
-            margin-top: 0px;
+            margin-top: 25px;
         }
 
         &-title {
@@ -29,11 +34,23 @@
             &-text {
                 font-size: 18px;
                 line-height: 145%;
+                margin-top: 30px;
+
+                &-span {
+                    border-bottom: 1px solid #DE701D;
+                    padding-bottom: 1px;
+                }
+
+                &:first-child {
+                    margin-top: 0px;
+                }
+
                 @include flight300;
             }
 
             &-logos {
                 display: flex;
+                align-items: center;
                 margin-top: 38px;
                 margin-bottom: 44px;
             }
@@ -44,110 +61,259 @@
                 &:first-child {
                     margin-left: 0px;
                 }
+
+                &-img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
+    }
+
+    &__element {
+        position: absolute;
+        z-index: 1;
+        right: 0px;
+        top: 100px;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .delivery {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-}
-
-@media screen and (max-width: 1160px) {
-    .delivery {
         &__card {
             padding-top: 49px;
-            padding-right: 62px;
-            padding-bottom: 49px;
             padding-left: 49px;
+            padding-bottom: 50px;
+            justify-content: space-between;
 
             &-title {
                 font-size: 22px;
-                margin-right: 20px;
+                margin-right: 0px;
+                max-width: 194px;
+                width: 100%;
+            }
+
+            &-content {
+                max-width: 633px;
+                width: 100%;
+
+                &-text {
+                    font-size: 16px;
+                    max-width: 633px;
+
+                    &-span {
+                        border-bottom: 0.810345px solid #DE701D;
+                    }
+                }
             }
 
             &-content {
                 &-text {
                     font-size: 16px;
                 }
+
+                &-logo {
+                    margin-left: 0px;
+
+                    &-img {}
+
+                    &-img-cdek {
+                        width: 91px;
+                        height: 26px;
+                        margin-right: 24px;
+                    }
+
+                    &-img-pek {
+                        width: 98px;
+                        height: 24px;
+                        margin-right: 24px;
+                    }
+
+                    &-img-pickpoint {
+                        width: 124px;
+                        height: 19px;
+                        margin-right: 24px;
+                    }
+
+                    &-img-lines {
+                        width: 203px;
+                        height: 31px;
+                    }
+
+                    &-img-visa {
+                        width: 79px;
+                        height: 26px;
+                        margin-right: 40px;
+                    }
+
+                    &-img-mir {
+                        width: 86px;
+                        height: 24px;
+                        margin-right: 40px;
+                    }
+
+                    &-img-master {
+                        width: 48px;
+                        height: 30px;
+                        margin-right: 40px;
+                    }
+
+                    &-img-tinkoff {
+                        width: 117px;
+                        height: 37px;
+                    }
+                }
+            }
+        }
+
+        &__element {
+            right: -75px;
+            top: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .delivery {
+        &__card {
+            padding: 30px;
+            justify-content: space-between;
+
+            &-title {
+                font-size: 16px;
+                line-height: 22px;
+                margin-right: 0px;
+                max-width: 140px;
+            }
+
+            &-content {
+                max-width: 418px;
+                width: 100%;
+
+                &-text {
+                    font-size: 14px;
+                    line-height: 145%;
+                    max-width: 418px;
+                    margin-top: 20px;
+                }
+
+                &-logo {
+                    &-img {}
+
+                    &-img-cdek {
+                        width: 60px;
+                        height: 17px;
+                        margin-right: 16px;
+                    }
+
+                    &-img-pek {
+                        width: 65px;
+                        height: 16px;
+                        margin-right: 16px;
+                    }
+
+                    &-img-pickpoint {
+                        width: 82px;
+                        height: 13px;
+                        margin-right: 16px;
+                    }
+
+                    &-img-lines {
+                        width: 134px;
+                        height: 20px;
+                    }
+
+                    &-img-visa {
+                        width: 52px;
+                        height: 17px;
+                        margin-right: 26px;
+                    }
+
+                    &-img-mir {
+                        width: 56px;
+                        height: 16px;
+                        margin-right: 26px;
+                    }
+
+                    &-img-master {
+                        width: 32px;
+                        height: 19px;
+                        margin-right: 26px;
+                    }
+
+                    &-img-tinkoff {
+                        width: 76px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+
+        &__element {
+            width: 775px;
+            height: 775px;
+            top: 220px;
+            right: -190px;
+            svg {
+                width: 100%;
+                height: 100%;
             }
         }
     }
 }
 
-@media screen and (max-width: 806px) {
+@media screen and (max-width: 660px) {
     .delivery {
+        &__element{
+            top: 150px;
+            right: -160px;
+        }
         &__card {
-            padding: 30px 30px 30px 30px;
+            flex-direction: column;
+
             &-title {
                 font-size: 16px;
                 line-height: 22px;
+                max-width: 123px;
+                margin-bottom: 25px;
             }
 
             &-content {
                 &-text {
                     font-size: 14px;
                     line-height: 145%;
-                }
-                &-logos{
-                    margin-top: 17px;
-                    margin-bottom: 31px;
-                }
-                &-logo{
-                    max-width: 60px;
-                    svg{
-                        width: 100%;
-                    }
+                    max-width: 398px;
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 536px) {
-    .delivery{
+@media screen and (max-width: 500px) {
+    .delivery {
         &__card {
-            flex-direction: column;
-            &-title {
-                margin-right: 0px;
-                margin-bottom: 20px;
-            }
+            padding: 20px;
+            padding-bottom: 25px;
 
             &-content {
                 &-text {
-                    max-width: 400px;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 366px) {
-    .delivery{
-        padding: 20px 20px 25px 20px;
-        &__card {
-            &-title {
-                max-width: 123px;
-            }
-
-            &-content {
-                &-text {
-                    max-width: 260px;
                     font-size: 12px;
+                    line-height: 145%;
+                    max-width: 260px;
+                    margin-top: 15px;
                 }
-                &-logos{
+
+                &-logos {
                     flex-wrap: wrap;
                 }
-                &-logo{
-                    max-width: 60px;
-                    max-width: 52px;
-                    margin-left: 0px;
-                    margin-right: 26px;
-                    &:last-child{
-                        margin-right: 0px;
+
+                &-logo {
+                    &-img-lines {
+                        margin-top: 9px;
+                    }
+
+                    &-img-tinkoff {
+                        margin-top: 10px;
                     }
                 }
             }
