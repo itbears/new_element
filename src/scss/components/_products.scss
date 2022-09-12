@@ -1,6 +1,5 @@
 .products {
     background-color: $body-bcg;
-    padding-bottom: 130px;
 
     &__request {
         position: relative;
@@ -38,6 +37,8 @@
         display: flex;
         flex-wrap: wrap;
         gap: 40px;
+        max-width: 1160px;
+        margin: auto;
 
         &-card {
             max-width: 360px;
@@ -50,7 +51,7 @@
             cursor: pointer;
 
             &:hover {
-                border: 2px solid #DE701D;
+                border: 2px solid #de701d;
             }
 
             &-wrapper {
@@ -74,6 +75,7 @@
                 font-size: 14px;
                 line-height: 19px;
                 margin-bottom: 15px;
+                @include fregular400;
             }
 
             &-prices {
@@ -92,7 +94,7 @@
             &-past-price {
                 font-size: 16px;
                 line-height: 145%;
-                color: #C0C0C0;
+                color: #c0c0c0;
                 @include fregular400;
                 margin-left: 5px;
             }
@@ -113,7 +115,7 @@
                     margin-right: 10px;
 
                     &:hover {
-                        background-color: #DE701D;
+                        background-color: #de701d;
                     }
 
                     &-pic {
@@ -140,13 +142,12 @@
     }
 }
 
-
-@media screen and(max-width: 1160px) {
+@media screen and(max-width: 1200px) {
     .products {
         &__title {
             font-size: 35px;
         }
-        &__wrapper{
+        &__wrapper {
             max-width: 960px;
         }
 
@@ -159,7 +160,6 @@
                 svg {
                     width: 100%;
                 }
-            
             }
 
             &-text {
@@ -170,21 +170,31 @@
 
         &__container {
             flex-wrap: nowrap;
-            overflow-x: scroll;
             padding-bottom: 30px;
-
+            max-width: 940px;
+            overflow: visible;
+            margin: auto;
+            &-wrap {
+                overflow-x: scroll;
+            }
+        }
+    }
+}
+@media screen and (max-width: 980px) {
+    .products {
+        &__container {
+            max-width: 620px;
         }
     }
 }
 
-@media screen and(max-width: 640px) {
+@media screen and (max-width: 660px) {
     .products {
         padding-bottom: 90px;
         &__title {
             font-size: 28px;
             line-height: 38px;
-            margin:90px 0 30px;
-
+            margin: 90px 0 30px;
         }
 
         &__request {
@@ -217,7 +227,6 @@
 
 @media screen and(max-width: 366px) {
     .products {
-
         &__container {
             gap: 20px;
 
@@ -292,9 +301,8 @@
             font-size: 25px;
             line-height: 34px;
         }
-        &__request{
+        &__request {
             padding: 19px 35px 18px;
-            
         }
 
         &__container {
@@ -349,7 +357,7 @@
                         padding: 7px 21px;
                         font-size: 9px;
                         margin-right: 0px;
-                        &-pic{
+                        &-pic {
                             margin-right: 0px;
                         }
                     }
@@ -363,8 +371,3 @@
         }
     }
 }
-@media screen and (max-width: 500px){
-
-.wrapper {
-    max-width: 460px;
-}}

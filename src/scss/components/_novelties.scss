@@ -1,6 +1,5 @@
 .novelties {
     background-color: $body-bcg;
-    padding-top: 130px;
     padding-bottom: 130px;
 
     &__title {
@@ -27,7 +26,7 @@
             border: 2px solid transparent;
 
             &:hover {
-                border: 2px solid #DE701D;
+                border: 2px solid #de701d;
             }
 
             &-wrapper {
@@ -76,7 +75,7 @@
             &-past-price {
                 font-size: 16px;
                 line-height: 145%;
-                color: #C0C0C0;
+                color: #c0c0c0;
                 @include fregular400;
                 margin-left: 5px;
             }
@@ -95,7 +94,7 @@
                     cursor: pointer;
 
                     &:hover {
-                        background-color: #DE701D;
+                        background-color: #de701d;
                     }
 
                     &-pic {
@@ -117,9 +116,10 @@
     }
 }
 
-@media screen and (max-width: 1200px) {}
-@media screen and (max-width: 640px){
-    .novelties{
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 640px) {
+    .novelties {
         padding: 0 0 90px;
     }
 }
