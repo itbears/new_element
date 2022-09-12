@@ -3,7 +3,7 @@
     padding-right: 10px;
     padding-left: 10px;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     &__checkbox {
         display: none;
     }
@@ -13,6 +13,7 @@
         right: 0px;
     }
     &__card {
+        margin-top: 20px;
         position: relative;
         z-index: 10;
         border-radius: 25px;
@@ -245,8 +246,6 @@
                         max-width: 200px;
                         margin-right: auto;
                     }
-
-                    &-secondary {}
                 }
             }
         }
@@ -400,7 +399,6 @@
 
                 &-button {
                     font-size: 12px;
-                    // padding: 8px 26.5px;
                 }
 
                 &-description {
@@ -459,38 +457,6 @@
                         &-secondary {
                             margin-top: 15px;
                         }
-                    }
-                }
-            }
-        }
-    }
-
-    @media screen and (max-width: 479px) {
-        .product {
-            &__card {
-                &-content {
-                    &-pic {
-                        max-width: 100%;
-
-                        img {
-                            height: 100%;
-                        }
-                    }
-
-                    &-button {
-                        padding: 8px 26px;
-
-                        &-svg {
-                            max-width: 17px;
-                        }
-                    }
-
-                    &-inner {
-                        flex-direction: column;
-                    }
-
-                    &-characteristics {
-                        flex-direction: column;
                     }
                 }
             }

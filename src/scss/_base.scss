@@ -45,6 +45,8 @@ body {
 }
 
 .bread-crumbs {
+    margin-top: 15px;
+
     &__list {
         display: flex;
         flex-wrap: wrap;
@@ -52,6 +54,7 @@ body {
 
     &__item {
         margin-right: 10px;
+
         &:last-child {
             margin-right: 0px;
 
@@ -76,6 +79,14 @@ body {
         @include flight300;
         color: #ffffff;
     }
+    &__item-black{
+        &::after{
+            content: url("../images/arrow-dark.svg");
+        }
+    }
+    &__link-black{
+        color: #121212;
+    }
 }
 
 .ymaps-2-1-79-map-copyrights-promo {
@@ -86,6 +97,7 @@ body {
     .wrapper {
         max-width: 940px;
     }
+
     .ymaps-2-1-79-map-copyrights-promo {
         padding-left: 0;
     }
@@ -107,13 +119,16 @@ body {
     .wrapper {
         max-width: 460px;
     }
+
     .bread-crumbs {
         white-space: nowrap;
+
         &__item {
             &::after {
                 max-width: 17.5px;
             }
         }
+
         &__link {
             font-size: 12px;
         }
@@ -124,6 +139,7 @@ body {
     .wrapper {
         max-width: 300px;
     }
+
     .bread-crumbs {
         &__link {
             font-size: 13px;

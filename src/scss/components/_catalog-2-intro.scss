@@ -93,22 +93,6 @@
             margin-top: 20px;
             max-width: 461px;
         }
-    }
-}
-
-@media screen and (max-width: 660px) {
-    .catalog-2-intro {
-        padding-bottom: 50px;
-
-        &__container {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        &__subtitle {
-            margin-top: 20px;
-            max-width: 461px;
-        }
 
         &__button {
             font-size: 13.3548px;
