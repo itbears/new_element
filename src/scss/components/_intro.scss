@@ -2,6 +2,12 @@
     background-color: $body-bcg;
     padding-bottom: 40px;
 
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     &__img {
         width: 100%;
         border-radius: 25px;
@@ -27,7 +33,7 @@
         font-size: 18px;
         line-height: 25px;
         color: white;
-        background-color: #DE701D;
+        background-color: #de701d;
         padding: 12px 20px;
         border-radius: 10px;
         display: inline-block;
@@ -35,6 +41,8 @@
         margin-top: 25px;
         @include fsemiBold600;
         transition: 0.5s;
+        max-width: 205px;
+        text-align: center;
 
         &:hover {
             background-color: white;
@@ -42,18 +50,23 @@
             transition: 0.5s;
         }
     }
+    .swiper-pagination-bullet {
+        background-color: $white;
+        width: 10px;
+        height: 10px;
+    }
 }
 
 .slide-one {
-    background-image: url('../images/intro.jpg');
+    background-image: url("../images/intro.jpg");
 }
 
 .slide-two {
-    background-image: url('../images/intro-2.jpg');
+    background-image: url("../images/intro-2.jpg");
 }
 
 .slide-three {
-    background-image: url('../images/intro-3.jpg');
+    background-image: url("../images/intro-3.jpg");
 }
 
 .swiper-slider {
@@ -67,7 +80,7 @@
     background-position: center;
     display: flex;
     align-items: center;
-    background-color: #C4C4C4;
+    background-color: #c4c4c4;
 }
 
 .swiper-pagination {
@@ -82,21 +95,6 @@
 
 @media screen and (max-width: 1200px) {
     .intro {
-        .wrapper {
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-    }
-}
-
-@media screen and (max-width: 1160px) {
-    .intro {
-        .wrapper {
-            padding-right: 0px;
-            padding-left: 0px;
-            max-width: 940px;
-        }
-
         &__title {
             font-size: 45px;
         }
@@ -104,19 +102,11 @@
         &__subtitle {
             font-size: 20px;
             line-height: 27px;
-
         }
     }
 }
-.br-mobile{
-    display: none;
-}
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 980px) {
     .intro {
-        .wrapper {
-            max-width: 620px;
-        }
-
         &__title {
             font-size: 38px;
         }
@@ -124,17 +114,12 @@
         &__subtitle {
             font-size: 20px;
             line-height: 27px;
-
         }
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 660px) {
     .intro {
-        .wrapper {
-            max-width: 461px;
-        }
-
         &__title {
             font-size: 35px;
         }
@@ -147,12 +132,8 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
     .intro {
-        .wrapper {
-            max-width: 300px;
-        }
-
         &__title {
             font-size: 30px;
             max-width: 300px;
@@ -170,7 +151,7 @@
             padding: 8px 14px;
         }
     }
-    .br-mobile{
+    .br-mobile {
         display: block;
     }
 }
