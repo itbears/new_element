@@ -1,5 +1,5 @@
 .contacts {
-    background-color: #EAEAEA;
+    background-color: #eaeaea;
     padding-top: 40px;
     padding-bottom: 80px;
     &__list-wrapper {
@@ -30,7 +30,7 @@
             white-space: nowrap;
             &:hover {
                 transition: 0.3s;
-                color: #DE701D;
+                color: #de701d;
             }
         }
     }
@@ -95,10 +95,10 @@
                 &-link {
                     color: #121212;
                     box-sizing: border-box;
-                    border-bottom: 1px solid #DE701D;
+                    border-bottom: 1px solid #de701d;
                     padding-bottom: 3px;
                     &:hover {
-                        color: #DE701D; 
+                        color: #de701d;
                     }
                 }
             }
@@ -118,6 +118,8 @@
         position: absolute;
         z-index: 1;
         right: 0px;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -135,7 +137,6 @@
 
         &__container {
             flex-direction: column-reverse;
-
         }
 
         &__map {
@@ -167,18 +168,16 @@
 
 @media screen and (max-width: 980px) {
     .contacts {
-        &__list-wrapper{
+        &__list-wrapper {
             border-radius: 15px;
         }
         &__list {
-            padding-top: 20px;
-            padding-bottom: 20px;
             overflow-x: scroll;
             flex-wrap: nowrap;
-            padding-bottom: 5px;
             justify-content: flex-start;
             padding-top: 30px;
             padding-bottom: 30px;
+            padding-right: 30px;
             &-item {
                 font-size: 16px;
                 line-height: 145%;
@@ -214,8 +213,9 @@
             &::-webkit-scrollbar {
                 width: 0;
                 height: 0;
-          }
-            &-item {}
+            }
+            &-item {
+            }
         }
 
         &__information {
@@ -238,7 +238,7 @@
 
 @media screen and (max-width: 500px) {
     .contacts {
-        &__list-wrapper{
+        &__list-wrapper {
             border-radius: 20px;
         }
         &__list {
@@ -274,7 +274,7 @@
                 }
             }
         }
-        &__map{
+        &__map {
             height: 314px;
         }
     }
