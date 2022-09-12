@@ -21,7 +21,7 @@ button {
 }
 
 body {
-    background-color: #EAEAEA;
+    background-color: #eaeaea;
 }
 
 .wrapper {
@@ -61,7 +61,7 @@ body {
         }
 
         &::after {
-            content: url('../images/arrow-white.svg');
+            content: url("../images/arrow-white.svg");
             display: inline-block;
             margin-left: 10px;
         }
@@ -78,9 +78,16 @@ body {
     }
 }
 
+.ymaps-2-1-79-map-copyrights-promo {
+    padding-left: 100px;
+}
+
 @media screen and (max-width: 1200px) {
     .wrapper {
         max-width: 940px;
+    }
+    .ymaps-2-1-79-map-copyrights-promo {
+        padding-left: 0;
     }
 }
 
@@ -102,8 +109,8 @@ body {
     }
     .bread-crumbs {
         white-space: nowrap;
-        &__item{
-            &::after{
+        &__item {
+            &::after {
                 max-width: 17.5px;
             }
         }
