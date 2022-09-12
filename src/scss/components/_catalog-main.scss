@@ -49,16 +49,17 @@
 
         &-card {
             max-width: 260px;
+            position: relative;
             width: 100%;
             border-radius: 20px;
             @include fmedium500;
-            border: 2px solid transparent;
+            border: 2px solid rgba(0,0,0,0.3);
             cursor: pointer;
             background-image: url('../images/catalog-jpg.jpg');
             height: 260px;
             padding-top: 20px;
             padding-left: 20px;
-
+            overflow: hidden;
             &:hover {
                 border: 2px solid #DE701D;
             }
@@ -71,17 +72,27 @@
                 font-size: 20px;
                 line-height: 27px;
                 color: black;
+                z-index: 99;
+                position: relative;
             }
 
             &-pic {
                 max-width: 260px;
                 display: flex;
                 align-items: flex-end;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 0;
             }
 
             &-img {
                 width: 100%;
+                height: 100%;
+                object-fit: cover;
+               
             }
+            
         }
     }
 
@@ -137,6 +148,7 @@
 
 @media screen and (max-width: 640px) {
     .catalog-main {
+        overflow: hidden;
         .wrapper {
             max-width: 460px;
         }
@@ -155,6 +167,7 @@
 
 @media screen and (max-width: 480px) {
     .catalog-main {
+        overflow: hidden;
         .wrapper {
             max-width: 300px;
         }

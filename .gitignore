@@ -13,6 +13,9 @@
 tags
 nbproject/*
 
+package-lock.json
+package.json
+
 # Windows
 Thumbs.db
 
