@@ -3,10 +3,6 @@ import '../scss/app.scss';
 // import 'swiper/css';
 import 'swiper/css/bundle';
 
-<<<<<<< Updated upstream
-=======
-new Swiper ('.swiper-slider', {
->>>>>>> Stashed changes
 /* Your JS Code goes here */
 new Swiper('.js-intro', {
     effect: "fade",
@@ -62,7 +58,6 @@ let headerCatalog = document.querySelector('.header__catalog');
 
 catalogBtn.addEventListener('click', function () {
     headerCatalog.classList.toggle('catalog-block');
-<<<<<<< Updated upstream
 })
 
 //city
@@ -86,9 +81,3 @@ headerBurger.addEventListener("click", () => {
     headerBurger.classList.toggle("active")
     headerNav.classList.toggle("active")
 })
-=======
-} )
-// catalogBtn.addEventListener('click', function() {
-//     headerCatalog.classList.toggle('header__catalog--top');
-// })
->>>>>>> Stashed changes
