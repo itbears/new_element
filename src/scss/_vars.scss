@@ -12,28 +12,35 @@ $gray-light: #c0c0c0;
 // Fonts
 @mixin fextraLight200 {
     font-family: "VelaSans-ExtraLight";
+    font-weight: 200;
 }
 
 @mixin flight300 {
     font-family: "VelaSans-Light";
+    font-weight: 300;
 }
 
 @mixin fregular400 {
     font-family: "VelaSans-Regular";
+    font-weight: 400;
 }
 
-@mixin  fmedium500{
+@mixin fmedium500 {
     font-family: "VelaSans-Medium";
+    font-weight: 500;
 }
 
 @mixin fsemiBold600 {
     font-family: "VelaSans-SemiBold";
+    font-weight: 600;
 }
 
 @mixin fbold700 {
     font-family: "VelaSans-Bold";
+    font-weight: 700;
 }
 
 @mixin fextraBold800 {
     font-family: "VelaSans-ExtraBold";
+    font-weight: 800;
 }
