@@ -31,6 +31,10 @@
             line-height: 25px;
             color: #808080;
             @include fregular400;
+            
+        }
+        span.current{
+            color: #121212;
         }
     }
 
