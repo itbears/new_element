@@ -33,7 +33,7 @@
         @include fextraLight200;
         font-size: 25px;
         line-height: 34px;
-        border-bottom: 1px solid #DE701D;
+        border-bottom: 1px solid #ff7400;
         display: inline-block;
         padding-bottom: 5px;
     }
@@ -43,7 +43,7 @@
         font-size: 18px;
         line-height: 25px;
         margin-top: 5px;
-        max-width: 440px
+        max-width: 440px;
     }
 
     &__date {
@@ -60,14 +60,14 @@
     &__request {
         position: relative;
         z-index: 1;
-        background-image: url('../images/about-request.png');
+        background-image: url("../images/about-request.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         height: 284px;
         display: flex;
         align-items: center;
-        background-color: #C4C4C4;
+        background-color: #c4c4c4;
         border-radius: 28px;
         flex-direction: column;
         justify-content: center;
@@ -95,7 +95,7 @@
             font-size: 18px;
             line-height: 25px;
             text-align: center;
-            background-color: #DE701D;
+            background-color: #ff7400;
             @include fsemiBold600;
             color: white;
             padding: 12px 20px;
@@ -106,7 +106,7 @@
             &:hover {
                 color: #121212;
                 background-color: #ffffff;
-                transition: 0.3s
+                transition: 0.3s;
             }
         }
     }
@@ -250,10 +250,9 @@
         }
 
         &__request {
-            
             &-title {
                 font-size: 25px;
-                line-height: 34px
+                line-height: 34px;
             }
 
             &-text {

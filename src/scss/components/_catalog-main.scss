@@ -23,7 +23,7 @@
             align-items: center;
             font-size: 18px;
             line-height: 25px;
-            background-color: #de701d;
+            background-color: #ff7400;
             padding: 12px 20px;
             @include fsemiBold600;
             color: white;
@@ -75,11 +75,11 @@
             }
 
             &:hover {
-                border: 2px solid #de701d;
+                border: 2px solid #ff7400;
             }
 
             &:hover &-name {
-                color: #de701d;
+                color: #ff7400;
             }
 
             &-name {
@@ -169,7 +169,6 @@
                 border-radius: 6.92604px;
             }
         }
-
         &__container {
             grid-template-columns: 1fr 1fr;
             grid-gap: 18px;

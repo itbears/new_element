@@ -1,5 +1,5 @@
 .catalog-2-intro {
-    background-image: url('../images/catalog-2-intro-back.png');
+    background-image: url("../images/catalog-2-intro-back.png");
     max-width: 100%;
     width: 100%;
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@
         @include fsemiBold600;
         font-size: 18px;
         line-height: 25px;
-        background-color: #DE701D;
+        background-color: #ff7400;
         border-radius: 10px;
         padding: 12px 20px;
         box-sizing: border-box;

@@ -29,7 +29,7 @@
         text-align: center;
         color: #ffffff;
         padding: 12px 20px;
-        background-color: #de701d;
+        background-color: #ff7400;
         border-radius: 10px;
         display: flex;
         max-width: 140px;
@@ -61,7 +61,7 @@
             border: 2px solid transparent;
             box-sizing: border-box;
             &:hover {
-                border: 2px solid #de701d;
+                border: 2px solid #ff7400;
             }
             &-img {
                 position: absolute;
@@ -85,7 +85,7 @@
                 padding: 3px 10px;
                 border-radius: 5px;
                 &-lifehack {
-                    background-color: #de701d;
+                    background-color: #ff7400;
                 }
                 &-article {
                     background-color: #0f754e;

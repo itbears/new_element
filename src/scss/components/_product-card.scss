@@ -1,5 +1,5 @@
 .product {
-    background-color: #EAEAEA;
+    background-color: #eaeaea;
     padding-right: 10px;
     padding-left: 10px;
     position: relative;
@@ -7,7 +7,7 @@
     &__checkbox {
         display: none;
     }
-    &__element{
+    &__element {
         position: absolute;
         z-index: 1;
         right: 0px;
@@ -54,7 +54,7 @@
             width: 100%;
 
             &-pic {
-                display: none
+                display: none;
             }
 
             &-title {
@@ -69,7 +69,6 @@
                 line-height: 19px;
                 margin-top: 2px;
                 color: #808080;
-
             }
 
             &-subtitle {
@@ -98,7 +97,7 @@
                 @include fregular400;
                 font-size: 16px;
                 line-height: 145%;
-                color: #C0C0C0;
+                color: #c0c0c0;
                 margin-left: 6px;
                 margin-right: 36px;
             }
@@ -107,7 +106,7 @@
                 @include fregular400;
                 font-size: 14px;
                 line-height: 19px;
-                background-color: #DE701D;
+                background-color: #ff7400;
                 color: white;
                 display: flex;
                 padding: 7px 32px;
@@ -212,12 +211,12 @@
         }
     }
 
-    &__checkbox:checked~&__card-content-characteristics-secondary-list {
+    &__checkbox:checked ~ &__card-content-characteristics-secondary-list {
         max-height: 1000px;
         transition: all 0.5s ease;
     }
 
-    &__checkbox:checked~&__card-content-characteristics-secondary-title svg {
+    &__checkbox:checked ~ &__card-content-characteristics-secondary-title svg {
         transform: rotate(180deg);
     }
 }
@@ -254,7 +253,7 @@
 
 @media screen and (max-width: 980px) {
     .product {
-        &__element{
+        &__element {
             right: -100px;
         }
         &__card {

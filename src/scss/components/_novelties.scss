@@ -27,7 +27,7 @@
             border: 2px solid transparent;
 
             &:hover {
-                border: 2px solid #DE701D;
+                border: 2px solid #ff7400;
             }
 
             &-wrapper {
@@ -76,7 +76,7 @@
             &-past-price {
                 font-size: 16px;
                 line-height: 145%;
-                color: #C0C0C0;
+                color: #c0c0c0;
                 @include fregular400;
                 margin-left: 5px;
             }
@@ -95,7 +95,7 @@
                     cursor: pointer;
 
                     &:hover {
-                        background-color: #DE701D;
+                        background-color: #ff7400;
                     }
 
                     &-pic {
@@ -117,4 +117,5 @@
     }
 }
 
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+}

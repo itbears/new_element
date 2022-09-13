@@ -1,5 +1,5 @@
 .delivery {
-    background-color: #EAEAEA;
+    background-color: #eaeaea;
     padding-bottom: 100px;
     position: relative;
     overflow: hidden;
@@ -37,7 +37,7 @@
                 margin-top: 30px;
 
                 &-span {
-                    border-bottom: 1px solid #DE701D;
+                    border-bottom: 1px solid #ff7400;
                     padding-bottom: 1px;
                 }
 
@@ -102,7 +102,7 @@
                     max-width: 633px;
 
                     &-span {
-                        border-bottom: 0.810345px solid #DE701D;
+                        border-bottom: 0.810345px solid #ff7400;
                     }
                 }
             }
@@ -259,7 +259,7 @@
 
 @media screen and (max-width: 660px) {
     .delivery {
-        &__element{
+        &__element {
             top: 150px;
             right: -160px;
         }

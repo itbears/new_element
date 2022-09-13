@@ -29,11 +29,11 @@
         background-color: #1b1b1b;
 
         &:hover {
-            border: 2px solid #de701d;
+            border: 2px solid #ff7400;
         }
 
         &:hover &-name {
-            color: #de701d;
+            color: #ff7400;
         }
 
         &-img {
@@ -59,7 +59,7 @@
             padding: 117px 45px;
 
             &:hover {
-                color: #de701d;
+                color: #ff7400;
             }
         }
 

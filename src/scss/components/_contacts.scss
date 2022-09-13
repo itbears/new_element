@@ -30,7 +30,7 @@
             white-space: nowrap;
             &:hover {
                 transition: 0.3s;
-                color: #de701d;
+                color: #ff7400;
             }
         }
     }
@@ -95,10 +95,10 @@
                 &-link {
                     color: #121212;
                     box-sizing: border-box;
-                    border-bottom: 1px solid #de701d;
+                    border-bottom: 1px solid #ff7400;
                     padding-bottom: 3px;
                     &:hover {
-                        color: #de701d;
+                        color: #ff7400;
                     }
                 }
             }

@@ -49,7 +49,7 @@
         cursor: pointer;
 
         &:hover {
-            border: 2px solid #de701d;
+            border: 2px solid #ff7400;
         }
 
         &-wrapper {
@@ -121,9 +121,10 @@
                 max-width: 160px;
                 font-size: 14px;
                 line-height: 19px;
+                @include fregular400;
 
                 &:hover {
-                    background-color: #de701d;
+                    background-color: #ff7400;
                 }
 
                 &-pic {
